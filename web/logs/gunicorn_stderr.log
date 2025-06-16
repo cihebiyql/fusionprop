@@ -1,0 +1,85 @@
+nohup: ignoring input
+[2025-05-28 09:42:41 +0800] [4747] [INFO] Starting gunicorn 23.0.0
+[2025-05-28 09:42:41 +0800] [4747] [INFO] Listening at: http://0.0.0.0:7973 (4747)
+[2025-05-28 09:42:41 +0800] [4747] [INFO] Using worker: sync
+[2025-05-28 09:42:41 +0800] [4749] [INFO] Booting worker with pid: 4749
+[2025-05-28 09:42:41 +0800] [4750] [INFO] Booting worker with pid: 4750
+[2025-05-28 09:42:41 +0800] [4751] [INFO] Booting worker with pid: 4751
+[2025-05-28 09:47:13 +0800] [4747] [INFO] Handling signal: hup
+[2025-05-28 09:47:13 +0800] [4747] [INFO] Hang up: Master
+[2025-05-28 09:47:13 +0800] [4747] [ERROR] Worker (pid:4749) was sent SIGHUP!
+[2025-05-28 09:47:13 +0800] [5778] [INFO] Booting worker with pid: 5778
+[2025-05-28 09:47:13 +0800] [4747] [ERROR] Worker (pid:4750) was sent SIGHUP!
+[2025-05-28 09:47:13 +0800] [5779] [INFO] Booting worker with pid: 5779
+[2025-05-28 09:47:13 +0800] [5780] [INFO] Booting worker with pid: 5780
+[2025-05-28 09:47:13 +0800] [4747] [ERROR] Worker (pid:4751) was sent SIGHUP!
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-04 03:35:23,476 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 10:38:11,702 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 10:38:21,289 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 10:38:24,979 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 10:38:40,656 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 11:16:31,632 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 11:16:37,260 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 11:17:18,735 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 11:18:50,780 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 11:19:14,594 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 11:19:17,580 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 11:19:20,503 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 11:27:28,204 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 11:27:34,609 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 11:27:50,884 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 11:29:40,585 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 11:30:46,697 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 11:31:02,724 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 11:32:58,120 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 11:33:20,849 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 11:34:40,105 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 11:36:43,065 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 11:38:33,212 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 11:50:03,739 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 11:51:43,327 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 11:51:49,222 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 12:18:58,540 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 12:19:17,451 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 12:41:21,617 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-10 12:43:50,043 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-11 01:43:42,723 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-11 01:43:44,683 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-15 15:02:25,693 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-15 15:03:06,532 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png
+Not Found: /fusionprop/static/images/magnifying_glass.png
+2025-06-15 15:03:15,670 - django.request - WARNING - Not Found: /fusionprop/static/images/magnifying_glass.png

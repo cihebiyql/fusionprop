@@ -1,0 +1,66 @@
+BASE_DIR is: /var/www/fusioprop
+STATICFILES_DIRS is: [PosixPath('/var/www/fusioprop/static')]
+--- DEBUGGING settings.py ---
+__file__ is: /var/www/fusioprop/protein_webapp/settings.py
+BASE_DIR calculated as: /var/www/fusioprop
+STATIC_URL is: static/
+STATICFILES_DIRS is: [PosixPath('/var/www/fusioprop/static')]
+FORCE_SCRIPT_NAME is: /fusionprop
+DEBUG is: True
+--- END DEBUGGING ---
+ 
+ -------------- celery@myserver v5.5.2 (immunity)
+--- ***** ----- 
+-- ******* ---- Linux-3.10.0-1160.el7.x86_64-x86_64-with-glibc2.17 2025-06-10 11:46:01
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         protein_webapp:0x7f5d44c48390
+- ** ---------- .> transport:   redis://localhost:6379/0
+- ** ---------- .> results:     redis://localhost:6379/0
+- *** --- * --- .> concurrency: 1 (gevent)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . predictor.tasks.check_idle_and_unload
+  . predictor.tasks.run_prediction_task
+  . protein_webapp.celery.debug_task
+
+
+Restarting celery worker (/var/www/admetsar3/anaconda/envs/fusionprop/bin/celery -A protein_webapp worker -l info -P gevent --concurrency=1)
+BASE_DIR is: /var/www/fusioprop
+STATICFILES_DIRS is: [PosixPath('/var/www/fusioprop/static')]
+--- DEBUGGING settings.py ---
+__file__ is: /var/www/fusioprop/protein_webapp/settings.py
+BASE_DIR calculated as: /var/www/fusioprop
+STATIC_URL is: static/
+STATICFILES_DIRS is: [PosixPath('/var/www/fusioprop/static')]
+FORCE_SCRIPT_NAME is: /fusionprop
+DEBUG is: True
+--- END DEBUGGING ---
+ 
+ -------------- celery@myserver v5.5.2 (immunity)
+--- ***** ----- 
+-- ******* ---- Linux-3.10.0-1160.el7.x86_64-x86_64-with-glibc2.17 2025-06-10 11:47:50
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         protein_webapp:0x7f43d75db490
+- ** ---------- .> transport:   redis://localhost:6379/0
+- ** ---------- .> results:     redis://localhost:6379/0
+- *** --- * --- .> concurrency: 1 (gevent)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . predictor.tasks.check_idle_and_unload
+  . predictor.tasks.run_prediction_task
+  . protein_webapp.celery.debug_task
+
+
+worker: Warm shutdown (MainProcess)

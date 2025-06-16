@@ -1,0 +1,546 @@
+nohup: ignoring input
+[2025-06-10 11:46:01,217: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2025-06-10 11:46:01,218: INFO/MainProcess] mingle: searching for neighbors
+[2025-06-10 11:46:02,232: INFO/MainProcess] mingle: all alone
+[2025-06-10 11:46:02,237: INFO/MainProcess] pidbox: Connected to redis://localhost:6379/0.
+[2025-06-10 11:46:02,242: INFO/MainProcess] celery@myserver ready.
+[2025-06-10 11:47:50,271: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2025-06-10 11:47:50,273: INFO/MainProcess] mingle: searching for neighbors
+[2025-06-10 11:47:51,281: INFO/MainProcess] mingle: all alone
+[2025-06-10 11:47:51,293: INFO/MainProcess] celery@myserver ready.
+[2025-06-10 11:47:51,296: INFO/MainProcess] pidbox: Connected to redis://localhost:6379/0.
+[2025-06-10 11:50:03,478: INFO/MainProcess] Task predictor.tasks.run_prediction_task[14991691-1a40-486c-a004-e322acb6cd26] received
+[2025-06-10 11:50:03,502: WARNING/MainProcess] FeatureManager not loaded. Initializing...
+[2025-06-10 11:50:03,502: INFO/MainProcess] Providing default feature configs: ESM2_PATH='facebook/esm2_t33_650M_UR50D', ESMC_PATH='esmc_600m'
+[2025-06-10 11:50:03,510: INFO/MainProcess] FeatureManager initialized. Device: cuda, Model Timeout: 10s
+[2025-06-10 11:50:03,510: WARNING/MainProcess]  MANAGEDMODEL_INIT_CALLED: Name: ESM2 (facebook/esm2_t33_650M_UR50D), Timeout: 10 
+[2025-06-10 11:50:03,510: INFO/MainProcess] Model ESM2 (facebook/esm2_t33_650M_UR50D) is None or timed out, reloading.
+[2025-06-10 11:50:03,510: INFO/MainProcess] Loading model: ESM2 (facebook/esm2_t33_650M_UR50D)...
+[2025-06-10 11:50:03,510: INFO/MainProcess] Executing ESM2 load function (path: facebook/esm2_t33_650M_UR50D)...
+[2025-06-10 11:50:05,163: INFO/MainProcess] Loading ESM2 model and tokenizer from: facebook/esm2_t33_650M_UR50D
+[2025-06-10 11:50:30,734: WARNING/MainProcess] Some weights of EsmModel were not initialized from the model checkpoint at facebook/esm2_t33_650M_UR50D and are newly initialized: ['esm.pooler.dense.bias', 'esm.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[2025-06-10 11:50:46,851: INFO/MainProcess] ESM2 model and tokenizer loaded via internal function.
+[2025-06-10 11:50:46,851: INFO/MainProcess] Model ESM2 (facebook/esm2_t33_650M_UR50D) loaded successfully.
+[2025-06-10 11:50:46,851: WARNING/MainProcess]  MANAGEDMODEL_CHECKER_LOOP_STARTED: Name: ESM2 (facebook/esm2_t33_650M_UR50D) 
+[2025-06-10 11:50:46,851: INFO/MainProcess] Checker thread started for ESM2 (facebook/esm2_t33_650M_UR50D).
+[2025-06-10 11:50:46,851: INFO/MainProcess] [MOD_LIFECYCLE_LOOP] Iteration for ESM2 (facebook/esm2_t33_650M_UR50D): Model IS LOADED.
+[2025-06-10 11:50:46,851: INFO/MainProcess] Checker thread initiated for ESM2 (facebook/esm2_t33_650M_UR50D).
+[2025-06-10 11:50:46,851: INFO/MainProcess] ManagedModel for ESM2 (facebook/esm2_t33_650M_UR50D) initialized.
+[2025-06-10 11:50:46,851: INFO/MainProcess] Successfully registered extractor: esm2 with ManagedModel.
+[2025-06-10 11:50:46,851: WARNING/MainProcess]  MANAGEDMODEL_INIT_CALLED: Name: ESMC (esmc_600m), Timeout: 10 
+[2025-06-10 11:50:46,851: INFO/MainProcess] Model ESMC (esmc_600m) is None or timed out, reloading.
+[2025-06-10 11:50:46,851: INFO/MainProcess] Loading model: ESMC (esmc_600m)...
+[2025-06-10 11:50:46,851: INFO/MainProcess] Loading ESMC from: esmc_600m
+[2025-06-10 11:51:18,692: INFO/MainProcess] [MOD_LIFECYCLE_LOOP] Iteration for ESM2 (facebook/esm2_t33_650M_UR50D): Model IS LOADED.
+[2025-06-10 11:51:18,692: INFO/MainProcess] ESM2 (facebook/esm2_t33_650M_UR50D) inactive for 31.84s. Threshold is 10s.
+[2025-06-10 11:51:18,692: INFO/MainProcess] [Checker Loop] - Inactivity detected for ESM2 (facebook/esm2_t33_650M_UR50D). Attempting release.
+[2025-06-10 11:51:18,692: INFO/MainProcess] Releasing model: ESM2 (facebook/esm2_t33_650M_UR50D) due to inactivity.
+[2025-06-10 11:51:18,693: INFO/MainProcess] [_release] - Deleting model instance reference for ESM2 (facebook/esm2_t33_650M_UR50D).
+[2025-06-10 11:51:18,693: INFO/MainProcess] [_release] - Model instance reference for ESM2 (facebook/esm2_t33_650M_UR50D) deleted.
+[2025-06-10 11:51:18,693: INFO/MainProcess] [_release] - Calling torch.cuda.empty_cache() for ESM2 (facebook/esm2_t33_650M_UR50D).
+[2025-06-10 11:51:18,693: INFO/MainProcess] CUDA cache emptied for ESM2 (facebook/esm2_t33_650M_UR50D).
+[2025-06-10 11:51:18,693: INFO/MainProcess] Model ESM2 (facebook/esm2_t33_650M_UR50D) released.
+[2025-06-10 11:53:08,119: INFO/MainProcess] Successfully loaded ESMC model from esmc_600m
+[2025-06-10 11:53:08,119: INFO/MainProcess] Model ESMC (esmc_600m) loaded successfully.
+[2025-06-10 11:53:08,119: WARNING/MainProcess]  MANAGEDMODEL_CHECKER_LOOP_STARTED: Name: ESMC (esmc_600m) 
+[2025-06-10 11:53:08,119: INFO/MainProcess] Checker thread started for ESMC (esmc_600m).
+[2025-06-10 11:53:08,119: INFO/MainProcess] [MOD_LIFECYCLE_LOOP] Iteration for ESMC (esmc_600m): Model IS LOADED.
+[2025-06-10 11:53:08,119: INFO/MainProcess] Checker thread initiated for ESMC (esmc_600m).
+[2025-06-10 11:53:08,119: INFO/MainProcess] ManagedModel for ESMC (esmc_600m) initialized.
+[2025-06-10 11:53:08,119: INFO/MainProcess] Successfully registered extractor: esmc with ManagedModel.
+[2025-06-10 11:53:08,119: WARNING/MainProcess] FeatureManager initialized successfully with timeout 10s.
+[2025-06-10 11:53:08,119: WARNING/MainProcess] ProteinPredictorManager not loaded. Initializing...
+[2025-06-10 11:53:08,119: WARNING/MainProcess] DIAGNOSTIC: ProteinPredictorManager module path: protein_predictor.predictor_manager N/A
+[2025-06-10 11:53:08,119: WARNING/MainProcess] DIAGNOSTIC: ProteinPredictorManager.__init__ signature: (self, toxicity_model_dir=None, thermostability_model_dir=None, solubility_model_dir=None, use_toxicity=True, use_thermostability=True, use_solubility=True, feature_manager_instance=None)
+[2025-06-10 11:53:08,120: INFO/MainProcess] 加载毒性预测模型...
+[2025-06-10 11:53:08,122: INFO/MainProcess] 已加载模型配置: 3 个模型
+[2025-06-10 11:53:08,122: WARNING/MainProcess] 特征统计文件不存在: /var/www/fusioprop/protein_predictor/models/toxicity/feature_stats.json，将使用默认值
+[2025-06-10 11:53:08,122: INFO/MainProcess] 从 /var/www/fusioprop/protein_predictor/models/toxicity 加载训练好的模型...
+[2025-06-10 11:53:08,122: INFO/MainProcess] 找到模型文件: best_model.pt
+[2025-06-10 11:53:08,122: INFO/MainProcess] 从配置文件读取模型参数: hidden_dim=768, dropout=0.5
+[2025-06-10 11:53:08,135: INFO/MainProcess] 从模型checkpoint的 'model_configs' 构建了配置: ['esm2', 'esmc']
+[2025-06-10 11:53:08,144: INFO/MainProcess] 成功加载模型: best_model.pt
+[2025-06-10 11:53:08,144: INFO/MainProcess] 成功加载 1 个模型
+[2025-06-10 11:53:08,144: INFO/MainProcess] 毒性预测器已初始化，设备: cuda, 已加载 1 个模型
+[2025-06-10 11:53:08,144: INFO/MainProcess] 加载热稳定性预测模型...
+[2025-06-10 11:53:08,144: INFO/MainProcess] 成功加载模型配置: ['esm2', 'esmc', 'splm']
+[2025-06-10 11:53:08,145: INFO/MainProcess] 已加载特征统计数据: ESM2 μ=-0.0012, σ=0.2773, ESMC μ=-0.0000, σ=0.0409
+[2025-06-10 11:53:08,145: INFO/MainProcess] 从 /var/www/fusioprop/protein_predictor/models/thermostability 加载训练好的模型...
+[2025-06-10 11:53:08,145: INFO/MainProcess] 找到 1 个模型文件
+[2025-06-10 11:53:08,145: INFO/MainProcess] 从配置文件读取模型参数: hidden_dim=768, dropout=0.0
+[2025-06-10 11:53:08,170: INFO/MainProcess] 从包含嵌套状态字典的模型文件中提取权重
+[2025-06-10 11:53:08,174: INFO/MainProcess] 成功加载模型: best_model.pth
+[2025-06-10 11:53:08,174: INFO/MainProcess] 成功加载 1 个模型
+[2025-06-10 11:53:08,174: INFO/MainProcess] 热稳定性预测器已初始化，设备: cuda, 已加载 1 个模型
+[2025-06-10 11:53:08,174: INFO/MainProcess] 从results.json读取模型参数: hidden_dim=256, dropout=0.5, normalization=sequence
+[2025-06-10 11:53:08,174: INFO/MainProcess] 加载溶解性预测模型...
+[2025-06-10 11:53:08,174: WARNING/MainProcess] 特征统计文件不存在: /var/www/fusioprop/protein_predictor/models/solubility/feature_stats.json，将使用默认值
+[2025-06-10 11:53:08,174: INFO/MainProcess] 从 /var/www/fusioprop/protein_predictor/models/solubility 加载训练好的模型...
+[2025-06-10 11:53:08,175: INFO/MainProcess] 找到 5 个模型文件
+[2025-06-10 11:53:08,180: INFO/MainProcess] 成功加载模型: best_model_fold_1.pth
+[2025-06-10 11:53:08,186: INFO/MainProcess] 成功加载模型: best_model_fold_2.pth
+[2025-06-10 11:53:08,191: INFO/MainProcess] 成功加载模型: best_model_fold_3.pth
+[2025-06-10 11:53:08,196: INFO/MainProcess] 成功加载模型: best_model_fold_4.pth
+[2025-06-10 11:53:08,202: INFO/MainProcess] 成功加载模型: best_model_fold_5.pth
+[2025-06-10 11:53:08,202: INFO/MainProcess] 成功加载 5 个模型
+[2025-06-10 11:53:08,202: INFO/MainProcess] 溶解性预测器已初始化，设备: cuda, 已加载 5 个模型
+[2025-06-10 11:53:08,202: INFO/MainProcess] 所有预测模型加载完成，耗时: 0.08秒
+[2025-06-10 11:53:08,202: WARNING/MainProcess] ProteinPredictorManager initialized successfully (using shared FeatureManager).
+[2025-06-10 11:53:08,202: WARNING/MainProcess] Starting batch prediction for Job ID: 47b1ad6d-7492-4a54-b744-743083508cce (2 sequences)
+[2025-06-10 11:53:08,203: WARNING/MainProcess] Job 47b1ad6d-7492-4a54-b744-743083508cce: Processing sequence 1/2 ('Example_Seq1_Toxin')
+[2025-06-10 11:53:08,203: INFO/MainProcess] [3b48689e6f8447a48fc7c96281319412] Attempting to extract ESM2 features for sequence: GFGCTLGKLEGCDGETCGADGWCDGPCQNG...
+[2025-06-10 11:53:08,203: INFO/MainProcess] Model ESM2 (facebook/esm2_t33_650M_UR50D) is None or timed out, reloading.
+[2025-06-10 11:53:08,203: INFO/MainProcess] Loading model: ESM2 (facebook/esm2_t33_650M_UR50D)...
+[2025-06-10 11:53:08,203: INFO/MainProcess] Executing ESM2 load function (path: facebook/esm2_t33_650M_UR50D)...
+[2025-06-10 11:53:08,203: INFO/MainProcess] Loading ESM2 model and tokenizer from: facebook/esm2_t33_650M_UR50D
+[2025-06-10 11:53:28,504: WARNING/MainProcess] Some weights of EsmModel were not initialized from the model checkpoint at facebook/esm2_t33_650M_UR50D and are newly initialized: ['esm.pooler.dense.bias', 'esm.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[2025-06-10 11:53:29,043: INFO/MainProcess] ESM2 model and tokenizer loaded via internal function.
+[2025-06-10 11:53:29,043: INFO/MainProcess] Model ESM2 (facebook/esm2_t33_650M_UR50D) loaded successfully.
+[2025-06-10 11:53:29,839: INFO/MainProcess] [3b48689e6f8447a48fc7c96281319412] ESM2 data extracted: ['residue_representation', 'mask', 'global_representation']
+[2025-06-10 11:53:29,843: INFO/MainProcess] [3b48689e6f8447a48fc7c96281319412] ESM2 feature dictionary saved to: temp_protein_predict_runs/predict_run_3b48689e6f8447a48fc7c96281319412/esm2_features/3b48689e6f8447a48fc7c96281319412_features.npy. Exists: True
+[2025-06-10 11:53:29,843: INFO/MainProcess] [3b48689e6f8447a48fc7c96281319412] Attempting to extract ESMC features for sequence: GFGCTLGKLEGCDGETCGADGWCDGPCQNG...
+[2025-06-10 11:53:30,003: INFO/MainProcess] [3b48689e6f8447a48fc7c96281319412] ESMC data extracted: ['residue_representation', 'mask', 'global_representation']
+[2025-06-10 11:53:30,005: INFO/MainProcess] [3b48689e6f8447a48fc7c96281319412] ESMC feature dictionary saved to: temp_protein_predict_runs/predict_run_3b48689e6f8447a48fc7c96281319412/esmc_features/3b48689e6f8447a48fc7c96281319412_features.npy. Exists: True
+[2025-06-10 11:53:30,006: INFO/MainProcess] [3b48689e6f8447a48fc7c96281319412] Calling ToxicityPredictor with esm2_dir='temp_protein_predict_runs/predict_run_3b48689e6f8447a48fc7c96281319412/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_3b48689e6f8447a48fc7c96281319412/esmc_features', ids=['3b48689e6f8447a48fc7c96281319412']
+[2025-06-10 11:53:30,006: INFO/MainProcess] [ToxicityPredictor.predict_batch] Called with esm2_dir: 'temp_protein_predict_runs/predict_run_3b48689e6f8447a48fc7c96281319412/esm2_features', esmc_dir: 'temp_protein_predict_runs/predict_run_3b48689e6f8447a48fc7c96281319412/esmc_features', sample_ids: ['3b48689e6f8447a48fc7c96281319412']
+[2025-06-10 11:53:30,006: INFO/MainProcess] [['3b48689e6f8447a48fc7c96281319412']] Creating FeatureDataset with esm2_dir='temp_protein_predict_runs/predict_run_3b48689e6f8447a48fc7c96281319412/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_3b48689e6f8447a48fc7c96281319412/esmc_features'...
+[2025-06-10 11:53:30,006: INFO/MainProcess] [['3b48689e6f8447a48fc7c96281319412']] FeatureDataset created. Length: 1
+[2025-06-10 11:53:30,006: INFO/MainProcess] [['3b48689e6f8447a48fc7c96281319412']] DataLoader created.
+[2025-06-10 11:53:30,017: INFO/MainProcess] [['3b48689e6f8447a48fc7c96281319412']] Processing batch 1/1
+[2025-06-10 11:53:30,017: WARNING/MainProcess] /var/www/fusioprop/protein_predictor/toxicity/predictor.py:296: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=self.config.use_amp):
+
+[2025-06-10 11:53:30,022: INFO/MainProcess] [['3b48689e6f8447a48fc7c96281319412']] Concatenated all batch probs. Final array shape: (1, 1). Total processed sample IDs: 1
+[2025-06-10 11:53:30,023: INFO/MainProcess] [['3b48689e6f8447a48fc7c96281319412']] Calculated probabilities from the single model. Shape: (1,)
+[2025-06-10 11:53:30,023: INFO/MainProcess] [['3b48689e6f8447a48fc7c96281319412']] Final prediction map generated with 1 entries. Overall mean prob: 0.9990234375
+[2025-06-10 11:53:30,023: INFO/MainProcess] [3b48689e6f8447a48fc7c96281319412] Toxicity_predictor raw result: {'prediction_map': {'3b48689e6f8447a48fc7c96281319412': {'toxicity_prob': 0.9990234375, 'is_toxic': True}}, 'mean_toxicity_prob': 0.9990234375}
+[2025-06-10 11:53:30,023: INFO/MainProcess] [3b48689e6f8447a48fc7c96281319412] Toxicity prediction_map keys: ['3b48689e6f8447a48fc7c96281319412']. Checking for sample_id: 3b48689e6f8447a48fc7c96281319412
+[2025-06-10 11:53:30,023: INFO/MainProcess] [3b48689e6f8447a48fc7c96281319412] Calling ThermostabilityPredictor with esm2_dir='temp_protein_predict_runs/predict_run_3b48689e6f8447a48fc7c96281319412/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_3b48689e6f8447a48fc7c96281319412/esmc_features', ids=['3b48689e6f8447a48fc7c96281319412']
+[2025-06-10 11:53:30,023: INFO/MainProcess] [ThermostabilityPredictor.predict_batch] Called with esm2_dir: 'temp_protein_predict_runs/predict_run_3b48689e6f8447a48fc7c96281319412/esm2_features', esmc_dir: 'temp_protein_predict_runs/predict_run_3b48689e6f8447a48fc7c96281319412/esmc_features', sample_ids: ['3b48689e6f8447a48fc7c96281319412']
+[2025-06-10 11:53:30,023: INFO/MainProcess] [['3b48689e6f8447a48fc7c96281319412']] Creating FeatureDataset with esm2_dir='temp_protein_predict_runs/predict_run_3b48689e6f8447a48fc7c96281319412/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_3b48689e6f8447a48fc7c96281319412/esmc_features'...
+[2025-06-10 11:53:30,023: INFO/MainProcess] [['3b48689e6f8447a48fc7c96281319412']] FeatureDataset created. Length: 1
+[2025-06-10 11:53:30,023: INFO/MainProcess] 开始预测 1 个样本...
+[2025-06-10 11:53:30,027: WARNING/MainProcess] /var/www/fusioprop/protein_predictor/thermostability/predictor.py:243: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=self.config.use_amp):
+
+[2025-06-10 11:53:30,031: INFO/MainProcess] [['3b48689e6f8447a48fc7c96281319412']] Final prediction map for Thermostability generated with 1 entries. Overall mean: 51.4375
+[2025-06-10 11:53:30,031: INFO/MainProcess] [3b48689e6f8447a48fc7c96281319412] Thermostability_predictor raw result: {'prediction_map': {'3b48689e6f8447a48fc7c96281319412': {'thermostability': 51.4375}}, 'mean_thermostability': 51.4375}
+[2025-06-10 11:53:30,031: INFO/MainProcess] [3b48689e6f8447a48fc7c96281319412] Thermostability prediction_map keys: ['3b48689e6f8447a48fc7c96281319412']. Checking for sample_id: 3b48689e6f8447a48fc7c96281319412
+[2025-06-10 11:53:30,031: INFO/MainProcess] [3b48689e6f8447a48fc7c96281319412] Calling SolubilityPredictor with esm2_dir='temp_protein_predict_runs/predict_run_3b48689e6f8447a48fc7c96281319412/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_3b48689e6f8447a48fc7c96281319412/esmc_features', ids=['3b48689e6f8447a48fc7c96281319412']
+[2025-06-10 11:53:30,031: INFO/MainProcess] [SolubilityPredictor.predict_batch] Called with esm2_dir: 'temp_protein_predict_runs/predict_run_3b48689e6f8447a48fc7c96281319412/esm2_features', esmc_dir: 'temp_protein_predict_runs/predict_run_3b48689e6f8447a48fc7c96281319412/esmc_features', sample_ids: ['3b48689e6f8447a48fc7c96281319412']
+[2025-06-10 11:53:30,031: INFO/MainProcess] [['3b48689e6f8447a48fc7c96281319412']] Creating NormalizedDataset (FeatureDataset) with esm2_dir='temp_protein_predict_runs/predict_run_3b48689e6f8447a48fc7c96281319412/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_3b48689e6f8447a48fc7c96281319412/esmc_features'...
+[2025-06-10 11:53:30,031: INFO/MainProcess] 找到 1 个共有样本
+[2025-06-10 11:53:30,031: INFO/MainProcess] 开始预测 1 个样本...
+[2025-06-10 11:53:30,037: WARNING/MainProcess] /var/www/fusioprop/protein_predictor/solubility/predictor.py:187: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=self.config.use_amp):
+
+[2025-06-10 11:53:30,040: INFO/MainProcess] [['3b48689e6f8447a48fc7c96281319412']] Final prediction map for Solubility generated with 1 entries. Overall mean solubility: 0.65537109375
+[2025-06-10 11:53:30,040: INFO/MainProcess] [3b48689e6f8447a48fc7c96281319412] Solubility_predictor raw result: {'prediction_map': {'3b48689e6f8447a48fc7c96281319412': {'solubility': 0.65537109375, 'confidence': 0.05411812979636538}}, 'mean_solubility': 0.65537109375}
+[2025-06-10 11:53:30,040: INFO/MainProcess] [3b48689e6f8447a48fc7c96281319412] Solubility prediction_map keys: ['3b48689e6f8447a48fc7c96281319412']. Checking for sample_id: 3b48689e6f8447a48fc7c96281319412
+[2025-06-10 11:53:30,040: INFO/MainProcess] Predict_all result for sample_id 3b48689e6f8447a48fc7c96281319412: {'sequence': 'GFGCTLGKLEGCDGETCGADGWCDGPCQNGGSCHGGSGSIGTGCGSCKGKECVCR', 'toxicity': {'toxicity_probability': 0.9990234375, 'is_toxic': True, 'risk_level': '极高', 'description': '高度可能是有毒蛋白质，具有很高的生物毒性风险', 'classification': '有毒蛋白质'}, 'thermostability': {'thermostability': 51.4375, 'interpretation': '中等热稳定性 - 蛋白质具有一般的热稳定性'}, 'solubility': {'solubility': 0.65537109375, 'interpretation': '高溶解度 - 蛋白质在水溶液中具有良好的溶解性，较易表达和纯化', 'confidence': 0.05411812979636538}}
+[2025-06-10 11:53:30,041: INFO/MainProcess] Task: single_result for sequence 'Example_Seq1_Toxin': {'sequence': 'GFGCTLGKLEGCDGETCGADGWCDGPCQNGGSCHGGSGSIGTGCGSCKGKECVCR', 'toxicity': {'toxicity_probability': 0.9990234375, 'is_toxic': True, 'risk_level': '极高', 'description': '高度可能是有毒蛋白质，具有很高的生物毒性风险', 'classification': '有毒蛋白质'}, 'thermostability': {'thermostability': 51.4375, 'interpretation': '中等热稳定性 - 蛋白质具有一般的热稳定性'}, 'solubility': {'solubility': 0.65537109375, 'interpretation': '高溶解度 - 蛋白质在水溶液中具有良好的溶解性，较易表达和纯化', 'confidence': 0.05411812979636538}}
+[2025-06-10 11:53:30,042: WARNING/MainProcess] Job 47b1ad6d-7492-4a54-b744-743083508cce: Processing sequence 2/2 ('Example_Seq2_Soluble')
+[2025-06-10 11:53:30,042: INFO/MainProcess] [4279b99ed00f4066a8fe7aa6994bf7a2] Attempting to extract ESM2 features for sequence: MKTAYIAKQRQISFVKSHFSRQLEERLGLI...
+[2025-06-10 11:53:30,128: INFO/MainProcess] [4279b99ed00f4066a8fe7aa6994bf7a2] ESM2 data extracted: ['residue_representation', 'mask', 'global_representation']
+[2025-06-10 11:53:30,130: INFO/MainProcess] [4279b99ed00f4066a8fe7aa6994bf7a2] ESM2 feature dictionary saved to: temp_protein_predict_runs/predict_run_4279b99ed00f4066a8fe7aa6994bf7a2/esm2_features/4279b99ed00f4066a8fe7aa6994bf7a2_features.npy. Exists: True
+[2025-06-10 11:53:30,130: INFO/MainProcess] [4279b99ed00f4066a8fe7aa6994bf7a2] Attempting to extract ESMC features for sequence: MKTAYIAKQRQISFVKSHFSRQLEERLGLI...
+[2025-06-10 11:53:30,758: INFO/MainProcess] [4279b99ed00f4066a8fe7aa6994bf7a2] ESMC data extracted: ['residue_representation', 'mask', 'global_representation']
+[2025-06-10 11:53:30,760: INFO/MainProcess] [4279b99ed00f4066a8fe7aa6994bf7a2] ESMC feature dictionary saved to: temp_protein_predict_runs/predict_run_4279b99ed00f4066a8fe7aa6994bf7a2/esmc_features/4279b99ed00f4066a8fe7aa6994bf7a2_features.npy. Exists: True
+[2025-06-10 11:53:30,760: INFO/MainProcess] [4279b99ed00f4066a8fe7aa6994bf7a2] Calling ToxicityPredictor with esm2_dir='temp_protein_predict_runs/predict_run_4279b99ed00f4066a8fe7aa6994bf7a2/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_4279b99ed00f4066a8fe7aa6994bf7a2/esmc_features', ids=['4279b99ed00f4066a8fe7aa6994bf7a2']
+[2025-06-10 11:53:30,760: INFO/MainProcess] [ToxicityPredictor.predict_batch] Called with esm2_dir: 'temp_protein_predict_runs/predict_run_4279b99ed00f4066a8fe7aa6994bf7a2/esm2_features', esmc_dir: 'temp_protein_predict_runs/predict_run_4279b99ed00f4066a8fe7aa6994bf7a2/esmc_features', sample_ids: ['4279b99ed00f4066a8fe7aa6994bf7a2']
+[2025-06-10 11:53:30,760: INFO/MainProcess] [['4279b99ed00f4066a8fe7aa6994bf7a2']] Creating FeatureDataset with esm2_dir='temp_protein_predict_runs/predict_run_4279b99ed00f4066a8fe7aa6994bf7a2/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_4279b99ed00f4066a8fe7aa6994bf7a2/esmc_features'...
+[2025-06-10 11:53:30,760: INFO/MainProcess] [['4279b99ed00f4066a8fe7aa6994bf7a2']] FeatureDataset created. Length: 1
+[2025-06-10 11:53:30,760: INFO/MainProcess] [['4279b99ed00f4066a8fe7aa6994bf7a2']] DataLoader created.
+[2025-06-10 11:53:30,765: INFO/MainProcess] [['4279b99ed00f4066a8fe7aa6994bf7a2']] Processing batch 1/1
+[2025-06-10 11:53:30,767: INFO/MainProcess] [['4279b99ed00f4066a8fe7aa6994bf7a2']] Concatenated all batch probs. Final array shape: (1, 1). Total processed sample IDs: 1
+[2025-06-10 11:53:30,767: INFO/MainProcess] [['4279b99ed00f4066a8fe7aa6994bf7a2']] Calculated probabilities from the single model. Shape: (1,)
+[2025-06-10 11:53:30,767: INFO/MainProcess] [['4279b99ed00f4066a8fe7aa6994bf7a2']] Final prediction map generated with 1 entries. Overall mean prob: 0.00010639429092407227
+[2025-06-10 11:53:30,767: INFO/MainProcess] [4279b99ed00f4066a8fe7aa6994bf7a2] Toxicity_predictor raw result: {'prediction_map': {'4279b99ed00f4066a8fe7aa6994bf7a2': {'toxicity_prob': 0.00010639429092407227, 'is_toxic': False}}, 'mean_toxicity_prob': 0.00010639429092407227}
+[2025-06-10 11:53:30,767: INFO/MainProcess] [4279b99ed00f4066a8fe7aa6994bf7a2] Toxicity prediction_map keys: ['4279b99ed00f4066a8fe7aa6994bf7a2']. Checking for sample_id: 4279b99ed00f4066a8fe7aa6994bf7a2
+[2025-06-10 11:53:30,767: INFO/MainProcess] [4279b99ed00f4066a8fe7aa6994bf7a2] Calling ThermostabilityPredictor with esm2_dir='temp_protein_predict_runs/predict_run_4279b99ed00f4066a8fe7aa6994bf7a2/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_4279b99ed00f4066a8fe7aa6994bf7a2/esmc_features', ids=['4279b99ed00f4066a8fe7aa6994bf7a2']
+[2025-06-10 11:53:30,767: INFO/MainProcess] [ThermostabilityPredictor.predict_batch] Called with esm2_dir: 'temp_protein_predict_runs/predict_run_4279b99ed00f4066a8fe7aa6994bf7a2/esm2_features', esmc_dir: 'temp_protein_predict_runs/predict_run_4279b99ed00f4066a8fe7aa6994bf7a2/esmc_features', sample_ids: ['4279b99ed00f4066a8fe7aa6994bf7a2']
+[2025-06-10 11:53:30,767: INFO/MainProcess] [['4279b99ed00f4066a8fe7aa6994bf7a2']] Creating FeatureDataset with esm2_dir='temp_protein_predict_runs/predict_run_4279b99ed00f4066a8fe7aa6994bf7a2/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_4279b99ed00f4066a8fe7aa6994bf7a2/esmc_features'...
+[2025-06-10 11:53:30,767: INFO/MainProcess] [['4279b99ed00f4066a8fe7aa6994bf7a2']] FeatureDataset created. Length: 1
+[2025-06-10 11:53:30,767: INFO/MainProcess] 开始预测 1 个样本...
+[2025-06-10 11:53:30,774: INFO/MainProcess] [['4279b99ed00f4066a8fe7aa6994bf7a2']] Final prediction map for Thermostability generated with 1 entries. Overall mean: 56.90625
+[2025-06-10 11:53:30,774: INFO/MainProcess] [4279b99ed00f4066a8fe7aa6994bf7a2] Thermostability_predictor raw result: {'prediction_map': {'4279b99ed00f4066a8fe7aa6994bf7a2': {'thermostability': 56.90625}}, 'mean_thermostability': 56.90625}
+[2025-06-10 11:53:30,774: INFO/MainProcess] [4279b99ed00f4066a8fe7aa6994bf7a2] Thermostability prediction_map keys: ['4279b99ed00f4066a8fe7aa6994bf7a2']. Checking for sample_id: 4279b99ed00f4066a8fe7aa6994bf7a2
+[2025-06-10 11:53:30,774: INFO/MainProcess] [4279b99ed00f4066a8fe7aa6994bf7a2] Calling SolubilityPredictor with esm2_dir='temp_protein_predict_runs/predict_run_4279b99ed00f4066a8fe7aa6994bf7a2/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_4279b99ed00f4066a8fe7aa6994bf7a2/esmc_features', ids=['4279b99ed00f4066a8fe7aa6994bf7a2']
+[2025-06-10 11:53:30,774: INFO/MainProcess] [SolubilityPredictor.predict_batch] Called with esm2_dir: 'temp_protein_predict_runs/predict_run_4279b99ed00f4066a8fe7aa6994bf7a2/esm2_features', esmc_dir: 'temp_protein_predict_runs/predict_run_4279b99ed00f4066a8fe7aa6994bf7a2/esmc_features', sample_ids: ['4279b99ed00f4066a8fe7aa6994bf7a2']
+[2025-06-10 11:53:30,774: INFO/MainProcess] [['4279b99ed00f4066a8fe7aa6994bf7a2']] Creating NormalizedDataset (FeatureDataset) with esm2_dir='temp_protein_predict_runs/predict_run_4279b99ed00f4066a8fe7aa6994bf7a2/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_4279b99ed00f4066a8fe7aa6994bf7a2/esmc_features'...
+[2025-06-10 11:53:30,775: INFO/MainProcess] 找到 1 个共有样本
+[2025-06-10 11:53:30,775: INFO/MainProcess] 开始预测 1 个样本...
+[2025-06-10 11:53:30,785: INFO/MainProcess] [['4279b99ed00f4066a8fe7aa6994bf7a2']] Final prediction map for Solubility generated with 1 entries. Overall mean solubility: 0.494140625
+[2025-06-10 11:53:30,786: INFO/MainProcess] [4279b99ed00f4066a8fe7aa6994bf7a2] Solubility_predictor raw result: {'prediction_map': {'4279b99ed00f4066a8fe7aa6994bf7a2': {'solubility': 0.494140625, 'confidence': 0.049922071763965715}}, 'mean_solubility': 0.494140625}
+[2025-06-10 11:53:30,786: INFO/MainProcess] [4279b99ed00f4066a8fe7aa6994bf7a2] Solubility prediction_map keys: ['4279b99ed00f4066a8fe7aa6994bf7a2']. Checking for sample_id: 4279b99ed00f4066a8fe7aa6994bf7a2
+[2025-06-10 11:53:30,786: INFO/MainProcess] Predict_all result for sample_id 4279b99ed00f4066a8fe7aa6994bf7a2: {'sequence': 'MKTAYIAKQRQISFVKSHFSRQLEERLGLIEVQAPILSRVGDGTQDNLSGAEKAVQVKVKALPDAQFEVVHSLAKWKRQTLGQHDFSAGEGLYTHMKALRPDEDRLSPLHSVYVDQWDWERVMGDGERQFSTLKSTVEAIWAGIKATEAAVSEEFGLAPFLPDQIHFVHSQELLSRYPDLDAKGRERAIAKDLGAVFLVGIGVVFERGTHGSELKGHQVPGDWFATSDLSFMGSSGSKHAVFKSAADGHLARAGQSVPEFLSFKEQRTLAELALASAARFD', 'toxicity': {'toxicity_probability': 0.00010639429092407227, 'is_toxic': False, 'risk_level': '极低', 'description': '高度可能是无毒蛋白质，生物毒性风险极低', 'classification': '无毒蛋白质'}, 'thermostability': {'thermostability': 56.90625, 'interpretation': '中等热稳定性 - 蛋白质具有一般的热稳定性'}, 'solubility': {'solubility': 0.494140625, 'interpretation': '中等溶解度 - 蛋白质具有一般的溶解性能，表达和纯化可能需要一定优化', 'confidence': 0.049922071763965715}}
+[2025-06-10 11:53:30,787: INFO/MainProcess] Task: single_result for sequence 'Example_Seq2_Soluble': {'sequence': 'MKTAYIAKQRQISFVKSHFSRQLEERLGLIEVQAPILSRVGDGTQDNLSGAEKAVQVKVKALPDAQFEVVHSLAKWKRQTLGQHDFSAGEGLYTHMKALRPDEDRLSPLHSVYVDQWDWERVMGDGERQFSTLKSTVEAIWAGIKATEAAVSEEFGLAPFLPDQIHFVHSQELLSRYPDLDAKGRERAIAKDLGAVFLVGIGVVFERGTHGSELKGHQVPGDWFATSDLSFMGSSGSKHAVFKSAADGHLARAGQSVPEFLSFKEQRTLAELALASAARFD', 'toxicity': {'toxicity_probability': 0.00010639429092407227, 'is_toxic': False, 'risk_level': '极低', 'description': '高度可能是无毒蛋白质，生物毒性风险极低', 'classification': '无毒蛋白质'}, 'thermostability': {'thermostability': 56.90625, 'interpretation': '中等热稳定性 - 蛋白质具有一般的热稳定性'}, 'solubility': {'solubility': 0.494140625, 'interpretation': '中等溶解度 - 蛋白质具有一般的溶解性能，表达和纯化可能需要一定优化', 'confidence': 0.049922071763965715}}
+[2025-06-10 11:53:30,787: WARNING/MainProcess] Finished batch prediction for Job ID: 47b1ad6d-7492-4a54-b744-743083508cce. Duration: 22.59 seconds.
+[2025-06-10 11:53:30,787: INFO/MainProcess] Task: final results_list before saving for job 47b1ad6d-7492-4a54-b744-743083508cce: [{'sequence': 'GFGCTLGKLEGCDGETCGADGWCDGPCQNGGSCHGGSGSIGTGCGSCKGKECVCR', 'toxicity': {'toxicity_probability': 0.9990234375, 'is_toxic': True, 'risk_level': '极高', 'description': '高度可能是有毒蛋白质，具有很高的生物毒性风险', 'classification': '有毒蛋白质'}, 'thermostability': {'thermostability': 51.4375, 'interpretation': '中等热稳定性 - 蛋白质具有一般的热稳定性'}, 'solubility': {'solubility': 0.65537109375, 'interpretation': '高溶解度 - 蛋白质在水溶液中具有良好的溶解性，较易表达和纯化', 'confidence': 0.05411812979636538}, 'name': 'Example_Seq1_Toxin', 'sequence_preview': 'GFGCTLGKLE...'}, {'sequence': 'MKTAYIAKQRQISFVKSHFSRQLEERLGLIEVQAPILSRVGDGTQDNLSGAEKAVQVKVKALPDAQFEVVHSLAKWKRQTLGQHDFSAGEGLYTHMKALRPDEDRLSPLHSVYVDQWDWERVMGDGERQFSTLKSTVEAIWAGIKATEAAVSEEFGLAPFLPDQIHFVHSQELLSRYPDLDAKGRERAIAKDLGAVFLVGIGVVFERGTHGSELKGHQVPGDWFATSDLSFMGSSGSKHAVFKSAADGHLARAGQSVPEFLSFKEQRTLAELALASAARFD', 'toxicity': {'toxicity_probability': 0.00010639429092407227, 'is_toxic': False, 'risk_level': '极低', 'description': '高度可能是无毒蛋白质，生物毒性风险极低', 'classification': '无毒蛋白质'}, 'thermostability': {'thermostability': 56.90625, 'interpretation': '中等热稳定性 - 蛋白质具有一般的热稳定性'}, 'solubility': {'solubility': 0.494140625, 'interpretation': '中等溶解度 - 蛋白质具有一般的溶解性能，表达和纯化可能需要一定优化', 'confidence': 0.049922071763965715}, 'name': 'Example_Seq2_Soluble', 'sequence_preview': 'MKTAYIAKQR...'}]
+[2025-06-10 11:53:30,792: INFO/MainProcess] Task predictor.tasks.run_prediction_task[14991691-1a40-486c-a004-e322acb6cd26] succeeded in 207.31293662451208s: {'status': 'COMPLETED', 'job_id': '47b1ad6d-7492-4a54-b744-743083508cce', 'count': 2}
+[2025-06-10 11:53:38,203: INFO/MainProcess] [MOD_LIFECYCLE_LOOP] Iteration for ESMC (esmc_600m): Model IS LOADED.
+[2025-06-10 11:53:38,207: INFO/MainProcess] [MOD_LIFECYCLE_LOOP] Iteration for ESM2 (facebook/esm2_t33_650M_UR50D): Model IS LOADED.
+[2025-06-10 11:54:08,204: INFO/MainProcess] [MOD_LIFECYCLE_LOOP] Iteration for ESMC (esmc_600m): Model IS LOADED.
+[2025-06-10 11:54:08,205: INFO/MainProcess] ESMC (esmc_600m) inactive for 38.07s. Threshold is 10s.
+[2025-06-10 11:54:08,205: INFO/MainProcess] [Checker Loop] - Inactivity detected for ESMC (esmc_600m). Attempting release.
+[2025-06-10 11:54:08,205: INFO/MainProcess] Releasing model: ESMC (esmc_600m) due to inactivity.
+[2025-06-10 11:54:08,205: INFO/MainProcess] [_release] - Deleting model instance reference for ESMC (esmc_600m).
+[2025-06-10 11:54:08,205: INFO/MainProcess] [_release] - Model instance reference for ESMC (esmc_600m) deleted.
+[2025-06-10 11:54:08,205: INFO/MainProcess] [_release] - Calling torch.cuda.empty_cache() for ESMC (esmc_600m).
+[2025-06-10 11:54:08,212: INFO/MainProcess] CUDA cache emptied for ESMC (esmc_600m).
+[2025-06-10 11:54:08,212: INFO/MainProcess] Model ESMC (esmc_600m) released.
+[2025-06-10 11:54:08,244: INFO/MainProcess] [MOD_LIFECYCLE_LOOP] Iteration for ESM2 (facebook/esm2_t33_650M_UR50D): Model IS LOADED.
+[2025-06-10 11:54:08,244: INFO/MainProcess] ESM2 (facebook/esm2_t33_650M_UR50D) inactive for 38.20s. Threshold is 10s.
+[2025-06-10 11:54:08,244: INFO/MainProcess] [Checker Loop] - Inactivity detected for ESM2 (facebook/esm2_t33_650M_UR50D). Attempting release.
+[2025-06-10 11:54:08,244: INFO/MainProcess] Releasing model: ESM2 (facebook/esm2_t33_650M_UR50D) due to inactivity.
+[2025-06-10 11:54:08,244: INFO/MainProcess] [_release] - Deleting model instance reference for ESM2 (facebook/esm2_t33_650M_UR50D).
+[2025-06-10 11:54:08,244: INFO/MainProcess] [_release] - Model instance reference for ESM2 (facebook/esm2_t33_650M_UR50D) deleted.
+[2025-06-10 11:54:08,244: INFO/MainProcess] [_release] - Calling torch.cuda.empty_cache() for ESM2 (facebook/esm2_t33_650M_UR50D).
+[2025-06-10 11:54:08,244: INFO/MainProcess] CUDA cache emptied for ESM2 (facebook/esm2_t33_650M_UR50D).
+[2025-06-10 11:54:08,244: INFO/MainProcess] Model ESM2 (facebook/esm2_t33_650M_UR50D) released.
+[2025-06-10 12:19:17,202: INFO/MainProcess] Task predictor.tasks.run_prediction_task[5324944e-99ec-456c-8199-af7e5f17931f] received
+[2025-06-10 12:19:17,235: WARNING/MainProcess] Starting batch prediction for Job ID: 36d24584-a348-47b2-96a9-2ee324931dda (2 sequences)
+[2025-06-10 12:19:17,236: WARNING/MainProcess] Job 36d24584-a348-47b2-96a9-2ee324931dda: Processing sequence 1/2 ('Example_Seq1_Toxin')
+[2025-06-10 12:19:17,237: INFO/MainProcess] [e8d6f6057f56424e978b9768d9aa3f16] Attempting to extract ESM2 features for sequence: GFGCTLGKLEGCDGETCGADGWCDGPCQNG...
+[2025-06-10 12:19:17,237: INFO/MainProcess] Model ESM2 (facebook/esm2_t33_650M_UR50D) is None or timed out, reloading.
+[2025-06-10 12:19:17,237: INFO/MainProcess] Loading model: ESM2 (facebook/esm2_t33_650M_UR50D)...
+[2025-06-10 12:19:17,237: INFO/MainProcess] Executing ESM2 load function (path: facebook/esm2_t33_650M_UR50D)...
+[2025-06-10 12:19:17,237: INFO/MainProcess] Loading ESM2 model and tokenizer from: facebook/esm2_t33_650M_UR50D
+[2025-06-10 12:19:44,664: WARNING/MainProcess] Some weights of EsmModel were not initialized from the model checkpoint at facebook/esm2_t33_650M_UR50D and are newly initialized: ['esm.pooler.dense.bias', 'esm.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[2025-06-10 12:19:45,526: INFO/MainProcess] ESM2 model and tokenizer loaded via internal function.
+[2025-06-10 12:19:45,527: INFO/MainProcess] Model ESM2 (facebook/esm2_t33_650M_UR50D) loaded successfully.
+[2025-06-10 12:19:45,561: INFO/MainProcess] [e8d6f6057f56424e978b9768d9aa3f16] ESM2 data extracted: ['residue_representation', 'mask', 'global_representation']
+[2025-06-10 12:19:45,564: INFO/MainProcess] [e8d6f6057f56424e978b9768d9aa3f16] ESM2 feature dictionary saved to: temp_protein_predict_runs/predict_run_e8d6f6057f56424e978b9768d9aa3f16/esm2_features/e8d6f6057f56424e978b9768d9aa3f16_features.npy. Exists: True
+[2025-06-10 12:19:45,564: INFO/MainProcess] [e8d6f6057f56424e978b9768d9aa3f16] Attempting to extract ESMC features for sequence: GFGCTLGKLEGCDGETCGADGWCDGPCQNG...
+[2025-06-10 12:19:45,564: INFO/MainProcess] Model ESMC (esmc_600m) is None or timed out, reloading.
+[2025-06-10 12:19:45,564: INFO/MainProcess] Loading model: ESMC (esmc_600m)...
+[2025-06-10 12:19:45,564: INFO/MainProcess] Loading ESMC from: esmc_600m
+[2025-06-10 12:20:04,863: INFO/MainProcess] Successfully loaded ESMC model from esmc_600m
+[2025-06-10 12:20:04,863: INFO/MainProcess] Model ESMC (esmc_600m) loaded successfully.
+[2025-06-10 12:20:05,001: INFO/MainProcess] [e8d6f6057f56424e978b9768d9aa3f16] ESMC data extracted: ['residue_representation', 'mask', 'global_representation']
+[2025-06-10 12:20:05,003: INFO/MainProcess] [e8d6f6057f56424e978b9768d9aa3f16] ESMC feature dictionary saved to: temp_protein_predict_runs/predict_run_e8d6f6057f56424e978b9768d9aa3f16/esmc_features/e8d6f6057f56424e978b9768d9aa3f16_features.npy. Exists: True
+[2025-06-10 12:20:05,003: INFO/MainProcess] [e8d6f6057f56424e978b9768d9aa3f16] Calling ToxicityPredictor with esm2_dir='temp_protein_predict_runs/predict_run_e8d6f6057f56424e978b9768d9aa3f16/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_e8d6f6057f56424e978b9768d9aa3f16/esmc_features', ids=['e8d6f6057f56424e978b9768d9aa3f16']
+[2025-06-10 12:20:05,003: INFO/MainProcess] [ToxicityPredictor.predict_batch] Called with esm2_dir: 'temp_protein_predict_runs/predict_run_e8d6f6057f56424e978b9768d9aa3f16/esm2_features', esmc_dir: 'temp_protein_predict_runs/predict_run_e8d6f6057f56424e978b9768d9aa3f16/esmc_features', sample_ids: ['e8d6f6057f56424e978b9768d9aa3f16']
+[2025-06-10 12:20:05,003: INFO/MainProcess] [['e8d6f6057f56424e978b9768d9aa3f16']] Creating FeatureDataset with esm2_dir='temp_protein_predict_runs/predict_run_e8d6f6057f56424e978b9768d9aa3f16/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_e8d6f6057f56424e978b9768d9aa3f16/esmc_features'...
+[2025-06-10 12:20:05,003: INFO/MainProcess] [['e8d6f6057f56424e978b9768d9aa3f16']] FeatureDataset created. Length: 1
+[2025-06-10 12:20:05,003: INFO/MainProcess] [['e8d6f6057f56424e978b9768d9aa3f16']] DataLoader created.
+[2025-06-10 12:20:05,007: INFO/MainProcess] [['e8d6f6057f56424e978b9768d9aa3f16']] Processing batch 1/1
+[2025-06-10 12:20:05,020: INFO/MainProcess] [['e8d6f6057f56424e978b9768d9aa3f16']] Concatenated all batch probs. Final array shape: (1, 1). Total processed sample IDs: 1
+[2025-06-10 12:20:05,020: INFO/MainProcess] [['e8d6f6057f56424e978b9768d9aa3f16']] Calculated probabilities from the single model. Shape: (1,)
+[2025-06-10 12:20:05,020: INFO/MainProcess] [['e8d6f6057f56424e978b9768d9aa3f16']] Final prediction map generated with 1 entries. Overall mean prob: 0.9990234375
+[2025-06-10 12:20:05,020: INFO/MainProcess] [e8d6f6057f56424e978b9768d9aa3f16] Toxicity_predictor raw result: {'prediction_map': {'e8d6f6057f56424e978b9768d9aa3f16': {'toxicity_prob': 0.9990234375, 'is_toxic': True}}, 'mean_toxicity_prob': 0.9990234375}
+[2025-06-10 12:20:05,020: INFO/MainProcess] [e8d6f6057f56424e978b9768d9aa3f16] Toxicity prediction_map keys: ['e8d6f6057f56424e978b9768d9aa3f16']. Checking for sample_id: e8d6f6057f56424e978b9768d9aa3f16
+[2025-06-10 12:20:05,020: INFO/MainProcess] [e8d6f6057f56424e978b9768d9aa3f16] Calling ThermostabilityPredictor with esm2_dir='temp_protein_predict_runs/predict_run_e8d6f6057f56424e978b9768d9aa3f16/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_e8d6f6057f56424e978b9768d9aa3f16/esmc_features', ids=['e8d6f6057f56424e978b9768d9aa3f16']
+[2025-06-10 12:20:05,020: INFO/MainProcess] [ThermostabilityPredictor.predict_batch] Called with esm2_dir: 'temp_protein_predict_runs/predict_run_e8d6f6057f56424e978b9768d9aa3f16/esm2_features', esmc_dir: 'temp_protein_predict_runs/predict_run_e8d6f6057f56424e978b9768d9aa3f16/esmc_features', sample_ids: ['e8d6f6057f56424e978b9768d9aa3f16']
+[2025-06-10 12:20:05,020: INFO/MainProcess] [['e8d6f6057f56424e978b9768d9aa3f16']] Creating FeatureDataset with esm2_dir='temp_protein_predict_runs/predict_run_e8d6f6057f56424e978b9768d9aa3f16/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_e8d6f6057f56424e978b9768d9aa3f16/esmc_features'...
+[2025-06-10 12:20:05,020: INFO/MainProcess] [['e8d6f6057f56424e978b9768d9aa3f16']] FeatureDataset created. Length: 1
+[2025-06-10 12:20:05,020: INFO/MainProcess] 开始预测 1 个样本...
+[2025-06-10 12:20:05,026: INFO/MainProcess] [['e8d6f6057f56424e978b9768d9aa3f16']] Final prediction map for Thermostability generated with 1 entries. Overall mean: 51.4375
+[2025-06-10 12:20:05,026: INFO/MainProcess] [e8d6f6057f56424e978b9768d9aa3f16] Thermostability_predictor raw result: {'prediction_map': {'e8d6f6057f56424e978b9768d9aa3f16': {'thermostability': 51.4375}}, 'mean_thermostability': 51.4375}
+[2025-06-10 12:20:05,026: INFO/MainProcess] [e8d6f6057f56424e978b9768d9aa3f16] Thermostability prediction_map keys: ['e8d6f6057f56424e978b9768d9aa3f16']. Checking for sample_id: e8d6f6057f56424e978b9768d9aa3f16
+[2025-06-10 12:20:05,026: INFO/MainProcess] [e8d6f6057f56424e978b9768d9aa3f16] Calling SolubilityPredictor with esm2_dir='temp_protein_predict_runs/predict_run_e8d6f6057f56424e978b9768d9aa3f16/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_e8d6f6057f56424e978b9768d9aa3f16/esmc_features', ids=['e8d6f6057f56424e978b9768d9aa3f16']
+[2025-06-10 12:20:05,027: INFO/MainProcess] [SolubilityPredictor.predict_batch] Called with esm2_dir: 'temp_protein_predict_runs/predict_run_e8d6f6057f56424e978b9768d9aa3f16/esm2_features', esmc_dir: 'temp_protein_predict_runs/predict_run_e8d6f6057f56424e978b9768d9aa3f16/esmc_features', sample_ids: ['e8d6f6057f56424e978b9768d9aa3f16']
+[2025-06-10 12:20:05,027: INFO/MainProcess] [['e8d6f6057f56424e978b9768d9aa3f16']] Creating NormalizedDataset (FeatureDataset) with esm2_dir='temp_protein_predict_runs/predict_run_e8d6f6057f56424e978b9768d9aa3f16/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_e8d6f6057f56424e978b9768d9aa3f16/esmc_features'...
+[2025-06-10 12:20:05,027: INFO/MainProcess] 找到 1 个共有样本
+[2025-06-10 12:20:05,027: INFO/MainProcess] 开始预测 1 个样本...
+[2025-06-10 12:20:05,034: INFO/MainProcess] [['e8d6f6057f56424e978b9768d9aa3f16']] Final prediction map for Solubility generated with 1 entries. Overall mean solubility: 0.65537109375
+[2025-06-10 12:20:05,034: INFO/MainProcess] [e8d6f6057f56424e978b9768d9aa3f16] Solubility_predictor raw result: {'prediction_map': {'e8d6f6057f56424e978b9768d9aa3f16': {'solubility': 0.65537109375, 'confidence': 0.05411812979636538}}, 'mean_solubility': 0.65537109375}
+[2025-06-10 12:20:05,034: INFO/MainProcess] [e8d6f6057f56424e978b9768d9aa3f16] Solubility prediction_map keys: ['e8d6f6057f56424e978b9768d9aa3f16']. Checking for sample_id: e8d6f6057f56424e978b9768d9aa3f16
+[2025-06-10 12:20:05,034: INFO/MainProcess] Predict_all result for sample_id e8d6f6057f56424e978b9768d9aa3f16: {'sequence': 'GFGCTLGKLEGCDGETCGADGWCDGPCQNGGSCHGGSGSIGTGCGSCKGKECVCR', 'toxicity': {'toxicity_probability': 0.9990234375, 'is_toxic': True, 'risk_level': '极高', 'description': '高度可能是有毒蛋白质，具有很高的生物毒性风险', 'classification': '有毒蛋白质'}, 'thermostability': {'thermostability': 51.4375, 'interpretation': '中等热稳定性 - 蛋白质具有一般的热稳定性'}, 'solubility': {'solubility': 0.65537109375, 'interpretation': '高溶解度 - 蛋白质在水溶液中具有良好的溶解性，较易表达和纯化', 'confidence': 0.05411812979636538}}
+[2025-06-10 12:20:05,035: INFO/MainProcess] Task: single_result for sequence 'Example_Seq1_Toxin': {'sequence': 'GFGCTLGKLEGCDGETCGADGWCDGPCQNGGSCHGGSGSIGTGCGSCKGKECVCR', 'toxicity': {'toxicity_probability': 0.9990234375, 'is_toxic': True, 'risk_level': '极高', 'description': '高度可能是有毒蛋白质，具有很高的生物毒性风险', 'classification': '有毒蛋白质'}, 'thermostability': {'thermostability': 51.4375, 'interpretation': '中等热稳定性 - 蛋白质具有一般的热稳定性'}, 'solubility': {'solubility': 0.65537109375, 'interpretation': '高溶解度 - 蛋白质在水溶液中具有良好的溶解性，较易表达和纯化', 'confidence': 0.05411812979636538}}
+[2025-06-10 12:20:05,036: INFO/MainProcess] [MOD_LIFECYCLE_LOOP] Iteration for ESMC (esmc_600m): Model IS LOADED.
+[2025-06-10 12:20:05,036: INFO/MainProcess] [MOD_LIFECYCLE_LOOP] Iteration for ESM2 (facebook/esm2_t33_650M_UR50D): Model IS LOADED.
+[2025-06-10 12:20:05,036: INFO/MainProcess] ESM2 (facebook/esm2_t33_650M_UR50D) inactive for 19.51s. Threshold is 10s.
+[2025-06-10 12:20:05,036: INFO/MainProcess] [Checker Loop] - Inactivity detected for ESM2 (facebook/esm2_t33_650M_UR50D). Attempting release.
+[2025-06-10 12:20:05,036: INFO/MainProcess] Releasing model: ESM2 (facebook/esm2_t33_650M_UR50D) due to inactivity.
+[2025-06-10 12:20:05,036: INFO/MainProcess] [_release] - Deleting model instance reference for ESM2 (facebook/esm2_t33_650M_UR50D).
+[2025-06-10 12:20:05,036: INFO/MainProcess] [_release] - Model instance reference for ESM2 (facebook/esm2_t33_650M_UR50D) deleted.
+[2025-06-10 12:20:05,036: INFO/MainProcess] [_release] - Calling torch.cuda.empty_cache() for ESM2 (facebook/esm2_t33_650M_UR50D).
+[2025-06-10 12:20:05,038: INFO/MainProcess] CUDA cache emptied for ESM2 (facebook/esm2_t33_650M_UR50D).
+[2025-06-10 12:20:05,038: INFO/MainProcess] Model ESM2 (facebook/esm2_t33_650M_UR50D) released.
+[2025-06-10 12:20:05,038: WARNING/MainProcess] Job 36d24584-a348-47b2-96a9-2ee324931dda: Processing sequence 2/2 ('Example_Seq2_Soluble')
+[2025-06-10 12:20:05,039: INFO/MainProcess] [19113d333f4f4d359d4947f388e140ad] Attempting to extract ESM2 features for sequence: MKTAYIAKQRQISFVKSHFSRQLEERLGLI...
+[2025-06-10 12:20:05,039: INFO/MainProcess] Model ESM2 (facebook/esm2_t33_650M_UR50D) is None or timed out, reloading.
+[2025-06-10 12:20:05,039: INFO/MainProcess] Loading model: ESM2 (facebook/esm2_t33_650M_UR50D)...
+[2025-06-10 12:20:05,039: INFO/MainProcess] Executing ESM2 load function (path: facebook/esm2_t33_650M_UR50D)...
+[2025-06-10 12:20:05,039: INFO/MainProcess] Loading ESM2 model and tokenizer from: facebook/esm2_t33_650M_UR50D
+[2025-06-10 12:20:25,143: WARNING/MainProcess] Some weights of EsmModel were not initialized from the model checkpoint at facebook/esm2_t33_650M_UR50D and are newly initialized: ['esm.pooler.dense.bias', 'esm.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[2025-06-10 12:20:26,245: ERROR/MainProcess] Failed to load model ESM2 (facebook/esm2_t33_650M_UR50D): CUDA out of memory. Tried to allocate 26.00 MiB. GPU 0 has a total capacity of 11.75 GiB of which 19.25 MiB is free. Process 17154 has 1.33 GiB memory in use. Process 17543 has 998.00 MiB memory in use. Process 23705 has 1.35 GiB memory in use. Process 23704 has 1.35 GiB memory in use. Including non-PyTorch memory, this process has 6.71 GiB memory in use. Of the allocated memory 5.62 GiB is allocated by PyTorch, and 116.26 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/var/www/fusioprop/protein_feature_extractor/model_lifecycle.py", line 55, in _load
+    self._model_instance = self.load_function()
+                           ^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/fusioprop/protein_feature_extractor/feature_manager.py", line 103, in <lambda>
+    load_func = lambda cfg=config: self._load_esm2_model_internal(cfg)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/fusioprop/protein_feature_extractor/feature_manager.py", line 52, in _load_esm2_model_internal
+    model = model.to(self.device).eval()
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/admetsar3/anaconda/envs/fusionprop/lib/python3.11/site-packages/transformers/modeling_utils.py", line 3110, in to
+    return super().to(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/admetsar3/anaconda/envs/fusionprop/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1343, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/admetsar3/anaconda/envs/fusionprop/lib/python3.11/site-packages/torch/nn/modules/module.py", line 903, in _apply
+    module._apply(fn)
+  File "/var/www/admetsar3/anaconda/envs/fusionprop/lib/python3.11/site-packages/torch/nn/modules/module.py", line 903, in _apply
+    module._apply(fn)
+  File "/var/www/admetsar3/anaconda/envs/fusionprop/lib/python3.11/site-packages/torch/nn/modules/module.py", line 903, in _apply
+    module._apply(fn)
+  [Previous line repeated 2 more times]
+  File "/var/www/admetsar3/anaconda/envs/fusionprop/lib/python3.11/site-packages/torch/nn/modules/module.py", line 930, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/var/www/admetsar3/anaconda/envs/fusionprop/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1329, in convert
+    return t.to(
+           ^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 26.00 MiB. GPU 0 has a total capacity of 11.75 GiB of which 19.25 MiB is free. Process 17154 has 1.33 GiB memory in use. Process 17543 has 998.00 MiB memory in use. Process 23705 has 1.35 GiB memory in use. Process 23704 has 1.35 GiB memory in use. Including non-PyTorch memory, this process has 6.71 GiB memory in use. Of the allocated memory 5.62 GiB is allocated by PyTorch, and 116.26 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[2025-06-10 12:20:26,248: WARNING/MainProcess] ManagedModel for ESM2 did not return a (model, tokenizer) tuple. Assuming old load function. Tokenizer might be missing or old.
+[2025-06-10 12:20:26,249: ERROR/MainProcess] Fallback: Failed to load tokenizer for ESM2 in extract_features: name 'AutoTokenizer' is not defined
+[2025-06-10 12:20:26,249: ERROR/MainProcess] ESM2 model or tokenizer not available.
+[2025-06-10 12:20:26,249: ERROR/MainProcess] Feature extraction failed for model 'esm2' on sequence 'MKTAYIAKQRQISFVKSHFSRQLEERLGLI...': ESM2 model or tokenizer failed to load.
+Traceback (most recent call last):
+  File "/var/www/fusioprop/protein_feature_extractor/feature_manager.py", line 158, in extract_features
+    residue_repr, mask, global_repr = extractor.extract_features(sequence, max_len)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/fusioprop/protein_feature_extractor/esm2_extractor.py", line 80, in extract_features
+    raise RuntimeError("ESM2 model or tokenizer failed to load.")
+RuntimeError: ESM2 model or tokenizer failed to load.
+[2025-06-10 12:20:26,249: ERROR/MainProcess] [19113d333f4f4d359d4947f388e140ad] Error extracting/saving ESM2 features: ESM2 model or tokenizer failed to load.
+Traceback (most recent call last):
+  File "/var/www/fusioprop/protein_predictor/predictor_manager.py", line 127, in predict_all
+    esm2_data = self.feature_manager.extract_features(sequence, "esm2")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/fusioprop/protein_feature_extractor/feature_manager.py", line 158, in extract_features
+    residue_repr, mask, global_repr = extractor.extract_features(sequence, max_len)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/fusioprop/protein_feature_extractor/esm2_extractor.py", line 80, in extract_features
+    raise RuntimeError("ESM2 model or tokenizer failed to load.")
+RuntimeError: ESM2 model or tokenizer failed to load.
+[2025-06-10 12:20:26,250: INFO/MainProcess] [19113d333f4f4d359d4947f388e140ad] Attempting to extract ESMC features for sequence: MKTAYIAKQRQISFVKSHFSRQLEERLGLI...
+[2025-06-10 12:20:26,853: INFO/MainProcess] [19113d333f4f4d359d4947f388e140ad] ESMC data extracted: ['residue_representation', 'mask', 'global_representation']
+[2025-06-10 12:20:26,855: INFO/MainProcess] [19113d333f4f4d359d4947f388e140ad] ESMC feature dictionary saved to: temp_protein_predict_runs/predict_run_19113d333f4f4d359d4947f388e140ad/esmc_features/19113d333f4f4d359d4947f388e140ad_features.npy. Exists: True
+[2025-06-10 12:20:26,855: INFO/MainProcess] [19113d333f4f4d359d4947f388e140ad] Calling ToxicityPredictor with esm2_dir='temp_protein_predict_runs/predict_run_19113d333f4f4d359d4947f388e140ad/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_19113d333f4f4d359d4947f388e140ad/esmc_features', ids=['19113d333f4f4d359d4947f388e140ad']
+[2025-06-10 12:20:26,855: INFO/MainProcess] [ToxicityPredictor.predict_batch] Called with esm2_dir: 'temp_protein_predict_runs/predict_run_19113d333f4f4d359d4947f388e140ad/esm2_features', esmc_dir: 'temp_protein_predict_runs/predict_run_19113d333f4f4d359d4947f388e140ad/esmc_features', sample_ids: ['19113d333f4f4d359d4947f388e140ad']
+[2025-06-10 12:20:26,855: INFO/MainProcess] [['19113d333f4f4d359d4947f388e140ad']] Creating FeatureDataset with esm2_dir='temp_protein_predict_runs/predict_run_19113d333f4f4d359d4947f388e140ad/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_19113d333f4f4d359d4947f388e140ad/esmc_features'...
+[2025-06-10 12:20:26,855: INFO/MainProcess] [['19113d333f4f4d359d4947f388e140ad']] FeatureDataset created. Length: 0
+[2025-06-10 12:20:26,855: WARNING/MainProcess] [['19113d333f4f4d359d4947f388e140ad']] FeatureDataset is empty. No features found for the given sample_ids or in the directories.
+[2025-06-10 12:20:26,855: INFO/MainProcess] [19113d333f4f4d359d4947f388e140ad] Toxicity_predictor raw result: {'prediction_map': {}, 'mean_toxicity_prob': None}
+[2025-06-10 12:20:26,855: INFO/MainProcess] [19113d333f4f4d359d4947f388e140ad] Toxicity prediction_map keys: []. Checking for sample_id: 19113d333f4f4d359d4947f388e140ad
+[2025-06-10 12:20:26,855: INFO/MainProcess] [19113d333f4f4d359d4947f388e140ad] Calling ThermostabilityPredictor with esm2_dir='temp_protein_predict_runs/predict_run_19113d333f4f4d359d4947f388e140ad/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_19113d333f4f4d359d4947f388e140ad/esmc_features', ids=['19113d333f4f4d359d4947f388e140ad']
+[2025-06-10 12:20:26,855: INFO/MainProcess] [ThermostabilityPredictor.predict_batch] Called with esm2_dir: 'temp_protein_predict_runs/predict_run_19113d333f4f4d359d4947f388e140ad/esm2_features', esmc_dir: 'temp_protein_predict_runs/predict_run_19113d333f4f4d359d4947f388e140ad/esmc_features', sample_ids: ['19113d333f4f4d359d4947f388e140ad']
+[2025-06-10 12:20:26,855: INFO/MainProcess] [['19113d333f4f4d359d4947f388e140ad']] Creating FeatureDataset with esm2_dir='temp_protein_predict_runs/predict_run_19113d333f4f4d359d4947f388e140ad/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_19113d333f4f4d359d4947f388e140ad/esmc_features'...
+[2025-06-10 12:20:26,855: INFO/MainProcess] [['19113d333f4f4d359d4947f388e140ad']] FeatureDataset created. Length: 0
+[2025-06-10 12:20:26,855: WARNING/MainProcess] [['19113d333f4f4d359d4947f388e140ad']] FeatureDataset is empty for ThermostabilityPredictor.
+[2025-06-10 12:20:26,855: INFO/MainProcess] [19113d333f4f4d359d4947f388e140ad] Thermostability_predictor raw result: {'prediction_map': {}, 'mean_thermostability': None}
+[2025-06-10 12:20:26,855: INFO/MainProcess] [19113d333f4f4d359d4947f388e140ad] Thermostability prediction_map keys: []. Checking for sample_id: 19113d333f4f4d359d4947f388e140ad
+[2025-06-10 12:20:26,855: INFO/MainProcess] [19113d333f4f4d359d4947f388e140ad] Calling SolubilityPredictor with esm2_dir='temp_protein_predict_runs/predict_run_19113d333f4f4d359d4947f388e140ad/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_19113d333f4f4d359d4947f388e140ad/esmc_features', ids=['19113d333f4f4d359d4947f388e140ad']
+[2025-06-10 12:20:26,855: INFO/MainProcess] [SolubilityPredictor.predict_batch] Called with esm2_dir: 'temp_protein_predict_runs/predict_run_19113d333f4f4d359d4947f388e140ad/esm2_features', esmc_dir: 'temp_protein_predict_runs/predict_run_19113d333f4f4d359d4947f388e140ad/esmc_features', sample_ids: ['19113d333f4f4d359d4947f388e140ad']
+[2025-06-10 12:20:26,855: INFO/MainProcess] [['19113d333f4f4d359d4947f388e140ad']] Creating NormalizedDataset (FeatureDataset) with esm2_dir='temp_protein_predict_runs/predict_run_19113d333f4f4d359d4947f388e140ad/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_19113d333f4f4d359d4947f388e140ad/esmc_features'...
+[2025-06-10 12:20:26,855: INFO/MainProcess] [19113d333f4f4d359d4947f388e140ad] Solubility_predictor raw result: {'prediction_map': {}, 'mean_solubility': None}
+[2025-06-10 12:20:26,855: INFO/MainProcess] [19113d333f4f4d359d4947f388e140ad] Solubility prediction_map keys: []. Checking for sample_id: 19113d333f4f4d359d4947f388e140ad
+[2025-06-10 12:20:26,855: INFO/MainProcess] Predict_all result for sample_id 19113d333f4f4d359d4947f388e140ad: {'sequence': 'MKTAYIAKQRQISFVKSHFSRQLEERLGLIEVQAPILSRVGDGTQDNLSGAEKAVQVKVKALPDAQFEVVHSLAKWKRQTLGQHDFSAGEGLYTHMKALRPDEDRLSPLHSVYVDQWDWERVMGDGERQFSTLKSTVEAIWAGIKATEAAVSEEFGLAPFLPDQIHFVHSQELLSRYPDLDAKGRERAIAKDLGAVFLVGIGVVFERGTHGSELKGHQVPGDWFATSDLSFMGSSGSKHAVFKSAADGHLARAGQSVPEFLSFKEQRTLAELALASAARFD'}
+[2025-06-10 12:20:26,856: INFO/MainProcess] Task: single_result for sequence 'Example_Seq2_Soluble': {'sequence': 'MKTAYIAKQRQISFVKSHFSRQLEERLGLIEVQAPILSRVGDGTQDNLSGAEKAVQVKVKALPDAQFEVVHSLAKWKRQTLGQHDFSAGEGLYTHMKALRPDEDRLSPLHSVYVDQWDWERVMGDGERQFSTLKSTVEAIWAGIKATEAAVSEEFGLAPFLPDQIHFVHSQELLSRYPDLDAKGRERAIAKDLGAVFLVGIGVVFERGTHGSELKGHQVPGDWFATSDLSFMGSSGSKHAVFKSAADGHLARAGQSVPEFLSFKEQRTLAELALASAARFD'}
+[2025-06-10 12:20:26,856: WARNING/MainProcess] Finished batch prediction for Job ID: 36d24584-a348-47b2-96a9-2ee324931dda. Duration: 69.62 seconds.
+[2025-06-10 12:20:26,856: INFO/MainProcess] Task: final results_list before saving for job 36d24584-a348-47b2-96a9-2ee324931dda: [{'sequence': 'GFGCTLGKLEGCDGETCGADGWCDGPCQNGGSCHGGSGSIGTGCGSCKGKECVCR', 'toxicity': {'toxicity_probability': 0.9990234375, 'is_toxic': True, 'risk_level': '极高', 'description': '高度可能是有毒蛋白质，具有很高的生物毒性风险', 'classification': '有毒蛋白质'}, 'thermostability': {'thermostability': 51.4375, 'interpretation': '中等热稳定性 - 蛋白质具有一般的热稳定性'}, 'solubility': {'solubility': 0.65537109375, 'interpretation': '高溶解度 - 蛋白质在水溶液中具有良好的溶解性，较易表达和纯化', 'confidence': 0.05411812979636538}, 'name': 'Example_Seq1_Toxin', 'sequence_preview': 'GFGCTLGKLE...'}, {'sequence': 'MKTAYIAKQRQISFVKSHFSRQLEERLGLIEVQAPILSRVGDGTQDNLSGAEKAVQVKVKALPDAQFEVVHSLAKWKRQTLGQHDFSAGEGLYTHMKALRPDEDRLSPLHSVYVDQWDWERVMGDGERQFSTLKSTVEAIWAGIKATEAAVSEEFGLAPFLPDQIHFVHSQELLSRYPDLDAKGRERAIAKDLGAVFLVGIGVVFERGTHGSELKGHQVPGDWFATSDLSFMGSSGSKHAVFKSAADGHLARAGQSVPEFLSFKEQRTLAELALASAARFD', 'name': 'Example_Seq2_Soluble', 'sequence_preview': 'MKTAYIAKQR...'}]
+[2025-06-10 12:20:26,867: INFO/MainProcess] Task predictor.tasks.run_prediction_task[5324944e-99ec-456c-8199-af7e5f17931f] succeeded in 69.66369366552681s: {'status': 'COMPLETED', 'job_id': '36d24584-a348-47b2-96a9-2ee324931dda', 'count': 2}
+[2025-06-10 12:20:35,037: INFO/MainProcess] [MOD_LIFECYCLE_LOOP] Iteration for ESMC (esmc_600m): Model IS LOADED.
+[2025-06-10 12:21:05,039: INFO/MainProcess] [MOD_LIFECYCLE_LOOP] Iteration for ESMC (esmc_600m): Model IS LOADED.
+[2025-06-10 12:21:05,039: INFO/MainProcess] ESMC (esmc_600m) inactive for 38.79s. Threshold is 10s.
+[2025-06-10 12:21:05,039: INFO/MainProcess] [Checker Loop] - Inactivity detected for ESMC (esmc_600m). Attempting release.
+[2025-06-10 12:21:05,040: INFO/MainProcess] Releasing model: ESMC (esmc_600m) due to inactivity.
+[2025-06-10 12:21:05,040: INFO/MainProcess] [_release] - Deleting model instance reference for ESMC (esmc_600m).
+[2025-06-10 12:21:05,040: INFO/MainProcess] [_release] - Model instance reference for ESMC (esmc_600m) deleted.
+[2025-06-10 12:21:05,040: INFO/MainProcess] [_release] - Calling torch.cuda.empty_cache() for ESMC (esmc_600m).
+[2025-06-10 12:21:05,040: INFO/MainProcess] CUDA cache emptied for ESMC (esmc_600m).
+[2025-06-10 12:21:05,040: INFO/MainProcess] Model ESMC (esmc_600m) released.
+[2025-06-10 12:43:49,803: INFO/MainProcess] Task predictor.tasks.run_prediction_task[5f370bc2-77f4-4c61-9476-021273916d65] received
+[2025-06-10 12:43:49,837: WARNING/MainProcess] Starting batch prediction for Job ID: cf943051-0db0-42a8-ac5f-926288e2167c (2 sequences)
+[2025-06-10 12:43:49,838: WARNING/MainProcess] Job cf943051-0db0-42a8-ac5f-926288e2167c: Processing sequence 1/2 ('Example_Seq1_Toxin')
+[2025-06-10 12:43:49,838: INFO/MainProcess] [d5d05a0d42e84623a2a4b409797ab0a8] Attempting to extract ESM2 features for sequence: GFGCTLGKLEGCDGETCGADGWCDGPCQNG...
+[2025-06-10 12:43:49,839: INFO/MainProcess] Model ESM2 (facebook/esm2_t33_650M_UR50D) is None or timed out, reloading.
+[2025-06-10 12:43:49,839: INFO/MainProcess] Loading model: ESM2 (facebook/esm2_t33_650M_UR50D)...
+[2025-06-10 12:43:49,839: INFO/MainProcess] Executing ESM2 load function (path: facebook/esm2_t33_650M_UR50D)...
+[2025-06-10 12:43:49,839: INFO/MainProcess] Loading ESM2 model and tokenizer from: facebook/esm2_t33_650M_UR50D
+[2025-06-10 12:44:10,100: WARNING/MainProcess] Some weights of EsmModel were not initialized from the model checkpoint at facebook/esm2_t33_650M_UR50D and are newly initialized: ['esm.pooler.dense.bias', 'esm.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[2025-06-10 12:44:10,185: ERROR/MainProcess] Failed to load model ESM2 (facebook/esm2_t33_650M_UR50D): CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 11.75 GiB of which 19.25 MiB is free. Process 17154 has 1.33 GiB memory in use. Process 17543 has 998.00 MiB memory in use. Process 23705 has 1.35 GiB memory in use. Process 23704 has 1.35 GiB memory in use. Including non-PyTorch memory, this process has 6.71 GiB memory in use. Of the allocated memory 5.62 GiB is allocated by PyTorch, and 116.09 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/var/www/fusioprop/protein_feature_extractor/model_lifecycle.py", line 55, in _load
+    self._model_instance = self.load_function()
+                           ^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/fusioprop/protein_feature_extractor/feature_manager.py", line 103, in <lambda>
+    load_func = lambda cfg=config: self._load_esm2_model_internal(cfg)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/fusioprop/protein_feature_extractor/feature_manager.py", line 52, in _load_esm2_model_internal
+    model = model.to(self.device).eval()
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/admetsar3/anaconda/envs/fusionprop/lib/python3.11/site-packages/transformers/modeling_utils.py", line 3110, in to
+    return super().to(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/admetsar3/anaconda/envs/fusionprop/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1343, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/admetsar3/anaconda/envs/fusionprop/lib/python3.11/site-packages/torch/nn/modules/module.py", line 903, in _apply
+    module._apply(fn)
+  File "/var/www/admetsar3/anaconda/envs/fusionprop/lib/python3.11/site-packages/torch/nn/modules/module.py", line 903, in _apply
+    module._apply(fn)
+  File "/var/www/admetsar3/anaconda/envs/fusionprop/lib/python3.11/site-packages/torch/nn/modules/module.py", line 930, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/var/www/admetsar3/anaconda/envs/fusionprop/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1329, in convert
+    return t.to(
+           ^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 11.75 GiB of which 19.25 MiB is free. Process 17154 has 1.33 GiB memory in use. Process 17543 has 998.00 MiB memory in use. Process 23705 has 1.35 GiB memory in use. Process 23704 has 1.35 GiB memory in use. Including non-PyTorch memory, this process has 6.71 GiB memory in use. Of the allocated memory 5.62 GiB is allocated by PyTorch, and 116.09 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[2025-06-10 12:44:10,187: WARNING/MainProcess] ManagedModel for ESM2 did not return a (model, tokenizer) tuple. Assuming old load function. Tokenizer might be missing or old.
+[2025-06-10 12:44:10,188: ERROR/MainProcess] Fallback: Failed to load tokenizer for ESM2 in extract_features: name 'AutoTokenizer' is not defined
+[2025-06-10 12:44:10,188: ERROR/MainProcess] ESM2 model or tokenizer not available.
+[2025-06-10 12:44:10,188: ERROR/MainProcess] Feature extraction failed for model 'esm2' on sequence 'GFGCTLGKLEGCDGETCGADGWCDGPCQNG...': ESM2 model or tokenizer failed to load.
+Traceback (most recent call last):
+  File "/var/www/fusioprop/protein_feature_extractor/feature_manager.py", line 158, in extract_features
+    residue_repr, mask, global_repr = extractor.extract_features(sequence, max_len)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/fusioprop/protein_feature_extractor/esm2_extractor.py", line 80, in extract_features
+    raise RuntimeError("ESM2 model or tokenizer failed to load.")
+RuntimeError: ESM2 model or tokenizer failed to load.
+[2025-06-10 12:44:10,189: ERROR/MainProcess] [d5d05a0d42e84623a2a4b409797ab0a8] Error extracting/saving ESM2 features: ESM2 model or tokenizer failed to load.
+Traceback (most recent call last):
+  File "/var/www/fusioprop/protein_predictor/predictor_manager.py", line 127, in predict_all
+    esm2_data = self.feature_manager.extract_features(sequence, "esm2")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/fusioprop/protein_feature_extractor/feature_manager.py", line 158, in extract_features
+    residue_repr, mask, global_repr = extractor.extract_features(sequence, max_len)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/fusioprop/protein_feature_extractor/esm2_extractor.py", line 80, in extract_features
+    raise RuntimeError("ESM2 model or tokenizer failed to load.")
+RuntimeError: ESM2 model or tokenizer failed to load.
+[2025-06-10 12:44:10,190: INFO/MainProcess] [d5d05a0d42e84623a2a4b409797ab0a8] Attempting to extract ESMC features for sequence: GFGCTLGKLEGCDGETCGADGWCDGPCQNG...
+[2025-06-10 12:44:10,190: INFO/MainProcess] Model ESMC (esmc_600m) is None or timed out, reloading.
+[2025-06-10 12:44:10,190: INFO/MainProcess] Loading model: ESMC (esmc_600m)...
+[2025-06-10 12:44:10,190: INFO/MainProcess] Loading ESMC from: esmc_600m
+[2025-06-10 12:44:16,957: INFO/MainProcess] Successfully loaded ESMC model from esmc_600m
+[2025-06-10 12:44:16,957: INFO/MainProcess] Model ESMC (esmc_600m) loaded successfully.
+[2025-06-10 12:44:17,102: INFO/MainProcess] [d5d05a0d42e84623a2a4b409797ab0a8] ESMC data extracted: ['residue_representation', 'mask', 'global_representation']
+[2025-06-10 12:44:17,104: INFO/MainProcess] [d5d05a0d42e84623a2a4b409797ab0a8] ESMC feature dictionary saved to: temp_protein_predict_runs/predict_run_d5d05a0d42e84623a2a4b409797ab0a8/esmc_features/d5d05a0d42e84623a2a4b409797ab0a8_features.npy. Exists: True
+[2025-06-10 12:44:17,104: INFO/MainProcess] [d5d05a0d42e84623a2a4b409797ab0a8] Calling ToxicityPredictor with esm2_dir='temp_protein_predict_runs/predict_run_d5d05a0d42e84623a2a4b409797ab0a8/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_d5d05a0d42e84623a2a4b409797ab0a8/esmc_features', ids=['d5d05a0d42e84623a2a4b409797ab0a8']
+[2025-06-10 12:44:17,105: INFO/MainProcess] [ToxicityPredictor.predict_batch] Called with esm2_dir: 'temp_protein_predict_runs/predict_run_d5d05a0d42e84623a2a4b409797ab0a8/esm2_features', esmc_dir: 'temp_protein_predict_runs/predict_run_d5d05a0d42e84623a2a4b409797ab0a8/esmc_features', sample_ids: ['d5d05a0d42e84623a2a4b409797ab0a8']
+[2025-06-10 12:44:17,105: INFO/MainProcess] [['d5d05a0d42e84623a2a4b409797ab0a8']] Creating FeatureDataset with esm2_dir='temp_protein_predict_runs/predict_run_d5d05a0d42e84623a2a4b409797ab0a8/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_d5d05a0d42e84623a2a4b409797ab0a8/esmc_features'...
+[2025-06-10 12:44:17,105: INFO/MainProcess] [['d5d05a0d42e84623a2a4b409797ab0a8']] FeatureDataset created. Length: 0
+[2025-06-10 12:44:17,105: WARNING/MainProcess] [['d5d05a0d42e84623a2a4b409797ab0a8']] FeatureDataset is empty. No features found for the given sample_ids or in the directories.
+[2025-06-10 12:44:17,105: INFO/MainProcess] [d5d05a0d42e84623a2a4b409797ab0a8] Toxicity_predictor raw result: {'prediction_map': {}, 'mean_toxicity_prob': None}
+[2025-06-10 12:44:17,105: INFO/MainProcess] [d5d05a0d42e84623a2a4b409797ab0a8] Toxicity prediction_map keys: []. Checking for sample_id: d5d05a0d42e84623a2a4b409797ab0a8
+[2025-06-10 12:44:17,105: INFO/MainProcess] [d5d05a0d42e84623a2a4b409797ab0a8] Calling ThermostabilityPredictor with esm2_dir='temp_protein_predict_runs/predict_run_d5d05a0d42e84623a2a4b409797ab0a8/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_d5d05a0d42e84623a2a4b409797ab0a8/esmc_features', ids=['d5d05a0d42e84623a2a4b409797ab0a8']
+[2025-06-10 12:44:17,105: INFO/MainProcess] [ThermostabilityPredictor.predict_batch] Called with esm2_dir: 'temp_protein_predict_runs/predict_run_d5d05a0d42e84623a2a4b409797ab0a8/esm2_features', esmc_dir: 'temp_protein_predict_runs/predict_run_d5d05a0d42e84623a2a4b409797ab0a8/esmc_features', sample_ids: ['d5d05a0d42e84623a2a4b409797ab0a8']
+[2025-06-10 12:44:17,105: INFO/MainProcess] [['d5d05a0d42e84623a2a4b409797ab0a8']] Creating FeatureDataset with esm2_dir='temp_protein_predict_runs/predict_run_d5d05a0d42e84623a2a4b409797ab0a8/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_d5d05a0d42e84623a2a4b409797ab0a8/esmc_features'...
+[2025-06-10 12:44:17,105: INFO/MainProcess] [['d5d05a0d42e84623a2a4b409797ab0a8']] FeatureDataset created. Length: 0
+[2025-06-10 12:44:17,105: WARNING/MainProcess] [['d5d05a0d42e84623a2a4b409797ab0a8']] FeatureDataset is empty for ThermostabilityPredictor.
+[2025-06-10 12:44:17,105: INFO/MainProcess] [d5d05a0d42e84623a2a4b409797ab0a8] Thermostability_predictor raw result: {'prediction_map': {}, 'mean_thermostability': None}
+[2025-06-10 12:44:17,105: INFO/MainProcess] [d5d05a0d42e84623a2a4b409797ab0a8] Thermostability prediction_map keys: []. Checking for sample_id: d5d05a0d42e84623a2a4b409797ab0a8
+[2025-06-10 12:44:17,105: INFO/MainProcess] [d5d05a0d42e84623a2a4b409797ab0a8] Calling SolubilityPredictor with esm2_dir='temp_protein_predict_runs/predict_run_d5d05a0d42e84623a2a4b409797ab0a8/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_d5d05a0d42e84623a2a4b409797ab0a8/esmc_features', ids=['d5d05a0d42e84623a2a4b409797ab0a8']
+[2025-06-10 12:44:17,105: INFO/MainProcess] [SolubilityPredictor.predict_batch] Called with esm2_dir: 'temp_protein_predict_runs/predict_run_d5d05a0d42e84623a2a4b409797ab0a8/esm2_features', esmc_dir: 'temp_protein_predict_runs/predict_run_d5d05a0d42e84623a2a4b409797ab0a8/esmc_features', sample_ids: ['d5d05a0d42e84623a2a4b409797ab0a8']
+[2025-06-10 12:44:17,105: INFO/MainProcess] [['d5d05a0d42e84623a2a4b409797ab0a8']] Creating NormalizedDataset (FeatureDataset) with esm2_dir='temp_protein_predict_runs/predict_run_d5d05a0d42e84623a2a4b409797ab0a8/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_d5d05a0d42e84623a2a4b409797ab0a8/esmc_features'...
+[2025-06-10 12:44:17,105: INFO/MainProcess] [d5d05a0d42e84623a2a4b409797ab0a8] Solubility_predictor raw result: {'prediction_map': {}, 'mean_solubility': None}
+[2025-06-10 12:44:17,105: INFO/MainProcess] [d5d05a0d42e84623a2a4b409797ab0a8] Solubility prediction_map keys: []. Checking for sample_id: d5d05a0d42e84623a2a4b409797ab0a8
+[2025-06-10 12:44:17,105: INFO/MainProcess] Predict_all result for sample_id d5d05a0d42e84623a2a4b409797ab0a8: {'sequence': 'GFGCTLGKLEGCDGETCGADGWCDGPCQNGGSCHGGSGSIGTGCGSCKGKECVCR'}
+[2025-06-10 12:44:17,105: INFO/MainProcess] Task: single_result for sequence 'Example_Seq1_Toxin': {'sequence': 'GFGCTLGKLEGCDGETCGADGWCDGPCQNGGSCHGGSGSIGTGCGSCKGKECVCR'}
+[2025-06-10 12:44:17,106: INFO/MainProcess] [MOD_LIFECYCLE_LOOP] Iteration for ESMC (esmc_600m): Model IS LOADED.
+[2025-06-10 12:44:17,107: WARNING/MainProcess] Job cf943051-0db0-42a8-ac5f-926288e2167c: Processing sequence 2/2 ('Example_Seq2_Soluble')
+[2025-06-10 12:44:17,107: INFO/MainProcess] [0a7665a3b97e4b528cfdce3334d782af] Attempting to extract ESM2 features for sequence: MKTAYIAKQRQISFVKSHFSRQLEERLGLI...
+[2025-06-10 12:44:17,107: INFO/MainProcess] Model ESM2 (facebook/esm2_t33_650M_UR50D) is None or timed out, reloading.
+[2025-06-10 12:44:17,107: INFO/MainProcess] Loading model: ESM2 (facebook/esm2_t33_650M_UR50D)...
+[2025-06-10 12:44:17,107: INFO/MainProcess] Executing ESM2 load function (path: facebook/esm2_t33_650M_UR50D)...
+[2025-06-10 12:44:17,107: INFO/MainProcess] Loading ESM2 model and tokenizer from: facebook/esm2_t33_650M_UR50D
+[2025-06-10 12:44:37,197: WARNING/MainProcess] Some weights of EsmModel were not initialized from the model checkpoint at facebook/esm2_t33_650M_UR50D and are newly initialized: ['esm.pooler.dense.bias', 'esm.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[2025-06-10 12:44:37,207: ERROR/MainProcess] Failed to load model ESM2 (facebook/esm2_t33_650M_UR50D): CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 11.75 GiB of which 19.25 MiB is free. Process 17154 has 1.33 GiB memory in use. Process 17543 has 998.00 MiB memory in use. Process 23705 has 1.35 GiB memory in use. Process 23704 has 1.35 GiB memory in use. Including non-PyTorch memory, this process has 6.71 GiB memory in use. Of the allocated memory 5.62 GiB is allocated by PyTorch, and 115.93 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/var/www/fusioprop/protein_feature_extractor/model_lifecycle.py", line 55, in _load
+    self._model_instance = self.load_function()
+                           ^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/fusioprop/protein_feature_extractor/feature_manager.py", line 103, in <lambda>
+    load_func = lambda cfg=config: self._load_esm2_model_internal(cfg)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/fusioprop/protein_feature_extractor/feature_manager.py", line 52, in _load_esm2_model_internal
+    model = model.to(self.device).eval()
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/admetsar3/anaconda/envs/fusionprop/lib/python3.11/site-packages/transformers/modeling_utils.py", line 3110, in to
+    return super().to(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/admetsar3/anaconda/envs/fusionprop/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1343, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/admetsar3/anaconda/envs/fusionprop/lib/python3.11/site-packages/torch/nn/modules/module.py", line 903, in _apply
+    module._apply(fn)
+  File "/var/www/admetsar3/anaconda/envs/fusionprop/lib/python3.11/site-packages/torch/nn/modules/module.py", line 903, in _apply
+    module._apply(fn)
+  File "/var/www/admetsar3/anaconda/envs/fusionprop/lib/python3.11/site-packages/torch/nn/modules/module.py", line 930, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/var/www/admetsar3/anaconda/envs/fusionprop/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1329, in convert
+    return t.to(
+           ^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 11.75 GiB of which 19.25 MiB is free. Process 17154 has 1.33 GiB memory in use. Process 17543 has 998.00 MiB memory in use. Process 23705 has 1.35 GiB memory in use. Process 23704 has 1.35 GiB memory in use. Including non-PyTorch memory, this process has 6.71 GiB memory in use. Of the allocated memory 5.62 GiB is allocated by PyTorch, and 115.93 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[2025-06-10 12:44:37,207: WARNING/MainProcess] ManagedModel for ESM2 did not return a (model, tokenizer) tuple. Assuming old load function. Tokenizer might be missing or old.
+[2025-06-10 12:44:37,207: ERROR/MainProcess] Fallback: Failed to load tokenizer for ESM2 in extract_features: name 'AutoTokenizer' is not defined
+[2025-06-10 12:44:37,207: ERROR/MainProcess] ESM2 model or tokenizer not available.
+[2025-06-10 12:44:37,207: ERROR/MainProcess] Feature extraction failed for model 'esm2' on sequence 'MKTAYIAKQRQISFVKSHFSRQLEERLGLI...': ESM2 model or tokenizer failed to load.
+Traceback (most recent call last):
+  File "/var/www/fusioprop/protein_feature_extractor/feature_manager.py", line 158, in extract_features
+    residue_repr, mask, global_repr = extractor.extract_features(sequence, max_len)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/fusioprop/protein_feature_extractor/esm2_extractor.py", line 80, in extract_features
+    raise RuntimeError("ESM2 model or tokenizer failed to load.")
+RuntimeError: ESM2 model or tokenizer failed to load.
+[2025-06-10 12:44:37,207: ERROR/MainProcess] [0a7665a3b97e4b528cfdce3334d782af] Error extracting/saving ESM2 features: ESM2 model or tokenizer failed to load.
+Traceback (most recent call last):
+  File "/var/www/fusioprop/protein_predictor/predictor_manager.py", line 127, in predict_all
+    esm2_data = self.feature_manager.extract_features(sequence, "esm2")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/fusioprop/protein_feature_extractor/feature_manager.py", line 158, in extract_features
+    residue_repr, mask, global_repr = extractor.extract_features(sequence, max_len)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/fusioprop/protein_feature_extractor/esm2_extractor.py", line 80, in extract_features
+    raise RuntimeError("ESM2 model or tokenizer failed to load.")
+RuntimeError: ESM2 model or tokenizer failed to load.
+[2025-06-10 12:44:37,207: INFO/MainProcess] [0a7665a3b97e4b528cfdce3334d782af] Attempting to extract ESMC features for sequence: MKTAYIAKQRQISFVKSHFSRQLEERLGLI...
+[2025-06-10 12:44:37,809: INFO/MainProcess] [0a7665a3b97e4b528cfdce3334d782af] ESMC data extracted: ['residue_representation', 'mask', 'global_representation']
+[2025-06-10 12:44:37,811: INFO/MainProcess] [0a7665a3b97e4b528cfdce3334d782af] ESMC feature dictionary saved to: temp_protein_predict_runs/predict_run_0a7665a3b97e4b528cfdce3334d782af/esmc_features/0a7665a3b97e4b528cfdce3334d782af_features.npy. Exists: True
+[2025-06-10 12:44:37,811: INFO/MainProcess] [0a7665a3b97e4b528cfdce3334d782af] Calling ToxicityPredictor with esm2_dir='temp_protein_predict_runs/predict_run_0a7665a3b97e4b528cfdce3334d782af/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_0a7665a3b97e4b528cfdce3334d782af/esmc_features', ids=['0a7665a3b97e4b528cfdce3334d782af']
+[2025-06-10 12:44:37,811: INFO/MainProcess] [ToxicityPredictor.predict_batch] Called with esm2_dir: 'temp_protein_predict_runs/predict_run_0a7665a3b97e4b528cfdce3334d782af/esm2_features', esmc_dir: 'temp_protein_predict_runs/predict_run_0a7665a3b97e4b528cfdce3334d782af/esmc_features', sample_ids: ['0a7665a3b97e4b528cfdce3334d782af']
+[2025-06-10 12:44:37,811: INFO/MainProcess] [['0a7665a3b97e4b528cfdce3334d782af']] Creating FeatureDataset with esm2_dir='temp_protein_predict_runs/predict_run_0a7665a3b97e4b528cfdce3334d782af/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_0a7665a3b97e4b528cfdce3334d782af/esmc_features'...
+[2025-06-10 12:44:37,811: INFO/MainProcess] [['0a7665a3b97e4b528cfdce3334d782af']] FeatureDataset created. Length: 0
+[2025-06-10 12:44:37,811: WARNING/MainProcess] [['0a7665a3b97e4b528cfdce3334d782af']] FeatureDataset is empty. No features found for the given sample_ids or in the directories.
+[2025-06-10 12:44:37,811: INFO/MainProcess] [0a7665a3b97e4b528cfdce3334d782af] Toxicity_predictor raw result: {'prediction_map': {}, 'mean_toxicity_prob': None}
+[2025-06-10 12:44:37,811: INFO/MainProcess] [0a7665a3b97e4b528cfdce3334d782af] Toxicity prediction_map keys: []. Checking for sample_id: 0a7665a3b97e4b528cfdce3334d782af
+[2025-06-10 12:44:37,811: INFO/MainProcess] [0a7665a3b97e4b528cfdce3334d782af] Calling ThermostabilityPredictor with esm2_dir='temp_protein_predict_runs/predict_run_0a7665a3b97e4b528cfdce3334d782af/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_0a7665a3b97e4b528cfdce3334d782af/esmc_features', ids=['0a7665a3b97e4b528cfdce3334d782af']
+[2025-06-10 12:44:37,811: INFO/MainProcess] [ThermostabilityPredictor.predict_batch] Called with esm2_dir: 'temp_protein_predict_runs/predict_run_0a7665a3b97e4b528cfdce3334d782af/esm2_features', esmc_dir: 'temp_protein_predict_runs/predict_run_0a7665a3b97e4b528cfdce3334d782af/esmc_features', sample_ids: ['0a7665a3b97e4b528cfdce3334d782af']
+[2025-06-10 12:44:37,811: INFO/MainProcess] [['0a7665a3b97e4b528cfdce3334d782af']] Creating FeatureDataset with esm2_dir='temp_protein_predict_runs/predict_run_0a7665a3b97e4b528cfdce3334d782af/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_0a7665a3b97e4b528cfdce3334d782af/esmc_features'...
+[2025-06-10 12:44:37,811: INFO/MainProcess] [['0a7665a3b97e4b528cfdce3334d782af']] FeatureDataset created. Length: 0
+[2025-06-10 12:44:37,811: WARNING/MainProcess] [['0a7665a3b97e4b528cfdce3334d782af']] FeatureDataset is empty for ThermostabilityPredictor.
+[2025-06-10 12:44:37,811: INFO/MainProcess] [0a7665a3b97e4b528cfdce3334d782af] Thermostability_predictor raw result: {'prediction_map': {}, 'mean_thermostability': None}
+[2025-06-10 12:44:37,811: INFO/MainProcess] [0a7665a3b97e4b528cfdce3334d782af] Thermostability prediction_map keys: []. Checking for sample_id: 0a7665a3b97e4b528cfdce3334d782af
+[2025-06-10 12:44:37,811: INFO/MainProcess] [0a7665a3b97e4b528cfdce3334d782af] Calling SolubilityPredictor with esm2_dir='temp_protein_predict_runs/predict_run_0a7665a3b97e4b528cfdce3334d782af/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_0a7665a3b97e4b528cfdce3334d782af/esmc_features', ids=['0a7665a3b97e4b528cfdce3334d782af']
+[2025-06-10 12:44:37,811: INFO/MainProcess] [SolubilityPredictor.predict_batch] Called with esm2_dir: 'temp_protein_predict_runs/predict_run_0a7665a3b97e4b528cfdce3334d782af/esm2_features', esmc_dir: 'temp_protein_predict_runs/predict_run_0a7665a3b97e4b528cfdce3334d782af/esmc_features', sample_ids: ['0a7665a3b97e4b528cfdce3334d782af']
+[2025-06-10 12:44:37,811: INFO/MainProcess] [['0a7665a3b97e4b528cfdce3334d782af']] Creating NormalizedDataset (FeatureDataset) with esm2_dir='temp_protein_predict_runs/predict_run_0a7665a3b97e4b528cfdce3334d782af/esm2_features', esmc_dir='temp_protein_predict_runs/predict_run_0a7665a3b97e4b528cfdce3334d782af/esmc_features'...
+[2025-06-10 12:44:37,811: INFO/MainProcess] [0a7665a3b97e4b528cfdce3334d782af] Solubility_predictor raw result: {'prediction_map': {}, 'mean_solubility': None}
+[2025-06-10 12:44:37,811: INFO/MainProcess] [0a7665a3b97e4b528cfdce3334d782af] Solubility prediction_map keys: []. Checking for sample_id: 0a7665a3b97e4b528cfdce3334d782af
+[2025-06-10 12:44:37,811: INFO/MainProcess] Predict_all result for sample_id 0a7665a3b97e4b528cfdce3334d782af: {'sequence': 'MKTAYIAKQRQISFVKSHFSRQLEERLGLIEVQAPILSRVGDGTQDNLSGAEKAVQVKVKALPDAQFEVVHSLAKWKRQTLGQHDFSAGEGLYTHMKALRPDEDRLSPLHSVYVDQWDWERVMGDGERQFSTLKSTVEAIWAGIKATEAAVSEEFGLAPFLPDQIHFVHSQELLSRYPDLDAKGRERAIAKDLGAVFLVGIGVVFERGTHGSELKGHQVPGDWFATSDLSFMGSSGSKHAVFKSAADGHLARAGQSVPEFLSFKEQRTLAELALASAARFD'}
+[2025-06-10 12:44:37,812: INFO/MainProcess] Task: single_result for sequence 'Example_Seq2_Soluble': {'sequence': 'MKTAYIAKQRQISFVKSHFSRQLEERLGLIEVQAPILSRVGDGTQDNLSGAEKAVQVKVKALPDAQFEVVHSLAKWKRQTLGQHDFSAGEGLYTHMKALRPDEDRLSPLHSVYVDQWDWERVMGDGERQFSTLKSTVEAIWAGIKATEAAVSEEFGLAPFLPDQIHFVHSQELLSRYPDLDAKGRERAIAKDLGAVFLVGIGVVFERGTHGSELKGHQVPGDWFATSDLSFMGSSGSKHAVFKSAADGHLARAGQSVPEFLSFKEQRTLAELALASAARFD'}
+[2025-06-10 12:44:37,812: WARNING/MainProcess] Finished batch prediction for Job ID: cf943051-0db0-42a8-ac5f-926288e2167c. Duration: 47.97 seconds.
+[2025-06-10 12:44:37,812: INFO/MainProcess] Task: final results_list before saving for job cf943051-0db0-42a8-ac5f-926288e2167c: [{'sequence': 'GFGCTLGKLEGCDGETCGADGWCDGPCQNGGSCHGGSGSIGTGCGSCKGKECVCR', 'name': 'Example_Seq1_Toxin', 'sequence_preview': 'GFGCTLGKLE...'}, {'sequence': 'MKTAYIAKQRQISFVKSHFSRQLEERLGLIEVQAPILSRVGDGTQDNLSGAEKAVQVKVKALPDAQFEVVHSLAKWKRQTLGQHDFSAGEGLYTHMKALRPDEDRLSPLHSVYVDQWDWERVMGDGERQFSTLKSTVEAIWAGIKATEAAVSEEFGLAPFLPDQIHFVHSQELLSRYPDLDAKGRERAIAKDLGAVFLVGIGVVFERGTHGSELKGHQVPGDWFATSDLSFMGSSGSKHAVFKSAADGHLARAGQSVPEFLSFKEQRTLAELALASAARFD', 'name': 'Example_Seq2_Soluble', 'sequence_preview': 'MKTAYIAKQR...'}]
+[2025-06-10 12:44:37,848: INFO/MainProcess] Task predictor.tasks.run_prediction_task[5f370bc2-77f4-4c61-9476-021273916d65] succeeded in 48.04327431228012s: {'status': 'COMPLETED', 'job_id': 'cf943051-0db0-42a8-ac5f-926288e2167c', 'count': 2}
+[2025-06-10 12:44:47,107: INFO/MainProcess] [MOD_LIFECYCLE_LOOP] Iteration for ESMC (esmc_600m): Model IS LOADED.
+[2025-06-10 12:45:17,108: INFO/MainProcess] [MOD_LIFECYCLE_LOOP] Iteration for ESMC (esmc_600m): Model IS LOADED.
+[2025-06-10 12:45:17,108: INFO/MainProcess] ESMC (esmc_600m) inactive for 39.90s. Threshold is 10s.
+[2025-06-10 12:45:17,108: INFO/MainProcess] [Checker Loop] - Inactivity detected for ESMC (esmc_600m). Attempting release.
+[2025-06-10 12:45:17,109: INFO/MainProcess] Releasing model: ESMC (esmc_600m) due to inactivity.
+[2025-06-10 12:45:17,109: INFO/MainProcess] [_release] - Deleting model instance reference for ESMC (esmc_600m).
+[2025-06-10 12:45:17,109: INFO/MainProcess] [_release] - Model instance reference for ESMC (esmc_600m) deleted.
+[2025-06-10 12:45:17,109: INFO/MainProcess] [_release] - Calling torch.cuda.empty_cache() for ESMC (esmc_600m).
+[2025-06-10 12:45:17,109: INFO/MainProcess] CUDA cache emptied for ESMC (esmc_600m).
+[2025-06-10 12:45:17,109: INFO/MainProcess] Model ESMC (esmc_600m) released.
