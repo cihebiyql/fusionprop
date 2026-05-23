@@ -1,0 +1,18 @@
+{
+  "n": 660,
+  "threshold": 0.5,
+  "actual_positive_count": 297,
+  "predicted_positive_count": 289,
+  "accuracy": 0.796969696969697,
+  "precision": 0.7820069204152249,
+  "recall": 0.7609427609427609,
+  "f1": 0.7713310580204779,
+  "mcc": 0.5890084174067378,
+  "roc_auc_continuous_score": 0.8955069519807811,
+  "confusion_matrix_tn_fp_fn_tp": [
+    300,
+    63,
+    71,
+    226
+  ]
+}

@@ -1,0 +1,39 @@
+﻿cff-version: 1.2.0
+message: "If you use FusionProp, please cite the associated manuscript and this software repository."
+title: "FusionProp: Structure-Free Protein Property Prediction by Fusing Protein Language Model Embeddings"
+version: "0.1.0"
+date-released: "2026-05-23"
+repository-code: "https://github.com/cihebiyql/fusionprop"
+url: "https://github.com/cihebiyql/fusionprop"
+license: MIT
+authors:
+  - family-names: Yu
+    given-names: Qiule
+  - family-names: Zhang
+    given-names: Zhixing
+  - family-names: Song
+    given-names: WenXiang
+  - family-names: Liu
+    given-names: Guixia
+  - family-names: Li
+    given-names: Weihua
+  - family-names: Tang
+    given-names: Yun
+preferred-citation:
+  type: article
+  title: "FusionProp: Structure-Free Protein Property Prediction by Fusing Protein Language Model Embeddings"
+  authors:
+    - family-names: Yu
+      given-names: Qiule
+    - family-names: Zhang
+      given-names: Zhixing
+    - family-names: Song
+      given-names: WenXiang
+    - family-names: Liu
+      given-names: Guixia
+    - family-names: Li
+      given-names: Weihua
+    - family-names: Tang
+      given-names: Yun
+  year: 2026
+  notes: "Manuscript in preparation/submission. Update this record with DOI after publication."

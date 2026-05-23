@@ -223,10 +223,35 @@ Once the web application is running successfully via local development mode or D
 4.  After submitting the task, the system will process the request asynchronously. You can check the task status and retrieve the prediction results for solubility, thermostability, and toxicity upon completion.
 5.  The results page typically provides detailed prediction values, confidence scores, and allows downloading the results as a CSV file.
 
+
+## Reproducing Manuscript Tables
+
+Compact source-data artifacts and reproduction scripts are included for the
+reported FusionProp values:
+
+```bash
+python scripts/reproduce_table2_solubility.py
+python scripts/reproduce_table4_toxicity.py
+python scripts/reproduce_table5_thermostability.py
+```
+
+The corresponding archived inputs are stored under `source_data/`:
+
+* `source_data/table2_solubility/` - eSOL held-out predictions and secondary classification metrics.
+* `source_data/table4_toxicity/` - FusionProp-Tox five-checkpoint ensemble predictions and metrics.
+* `source_data/table5_thermostability/` - split/version-level FusionProp-Thermo metrics used for Table 5 summaries.
+
+Model artifacts and their checksums are documented in `models/README.md`,
+`models/MODEL_MANIFEST.csv`, and `CHECKSUMS.sha256`.
+Original training and evaluation entry points are archived under
+`train_script/`, including the toxicity ensemble evaluator and the
+thermostability submission scripts used for the Table 5 split/version runs.
+
+
 ## Important Notes
 
 *   **GPU/Memory Management:** Protein language models and deep learning model training/inference consume significant computational resources. Ensure your environment has sufficient RAM (and VRAM, if using GPU). The model manager in the web application includes some auto-release mechanisms.
-*   **Model Path Configuration:** Correct configuration of model file paths is crucial for both local execution and Docker deployment. It's recommended to use environment variables священник with default paths in the code (like Hugging Face Hub IDs) for flexibility.
+*   **Model Path Configuration:** Correct configuration of model file paths is crucial for both local execution and Docker deployment. It is recommended to use environment variables or default model paths in the code (such as Hugging Face Hub IDs) for flexibility.
 *   **Large Files:** This project uses Git LFS to manage large data files and some model files. Ensure you have Git LFS installed and run `git lfs pull` after cloning the repository.
 
 ## Contributing
@@ -235,7 +260,7 @@ Contributions to this project are welcome! Please submit Pull Requests or create
 
 ## License
 
-(Please add your project's license information here, e.g., MIT, Apache 2.0, etc. If undecided, you can leave it blank for now or write "To be determined".)
+This project is released under the MIT License. See [LICENSE](./LICENSE).
 
 ---
 *For the Chinese version, please see [README_zh.md](./README_zh.md)*

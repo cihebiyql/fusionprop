@@ -20,11 +20,11 @@ python train_22_1_1.py \
     --sequence_column sequence \
     --batch_size 16 \
     --epochs 30 \
-    --lr 0.00031133051580893887 \
-    --weight_decay 1.2280840051269987e-06 \
+    --lr 3e-4 \
+    --weight_decay 3e-5 \
     --max_seq_len 600 \
-    --hidden_dim 384 \
-    --dropout 0.15 \
+    --hidden_dim 256 \
+    --dropout 0.3 \
     --num_folds 5 \
     --patience 5 \
     --seed 42 \
