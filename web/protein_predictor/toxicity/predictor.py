@@ -108,22 +108,33 @@ class ToxicityPredictor:
         model_dir = Path(self.config.model_dir)
         logger.info(f"从 {model_dir} 加载训练好的模型...")
         
-        # 查找模型文件 - 修改为加载 best_model.pt
-        model_file = model_dir / "best_model.pt"
-        
-        if not model_file.exists():
-            # Fallback to looking for any .pt file if best_model.pt is not found
-            model_files_glob = list(model_dir.glob("*.pt"))
-            if not model_files_glob:
-                error_msg = f"在 {model_dir} 中未找到 best_model.pt 或任何 .pt 模型文件"
-                logger.error(error_msg)
-                raise FileNotFoundError(error_msg)
-            
-            model_file = model_files_glob[0] # Take the first one found
-            logger.warning(f"best_model.pt 未找到，回退加载: {model_file.name}")
+        # 优先加载 GitHub 归档的 toxicity ensemble；不存在时保持旧的 best_model.pt 回退。
+        ensemble_dir = model_dir / "ensemble_20250513_105204"
+        ensemble_files = sorted(ensemble_dir.glob("*.pt")) if ensemble_dir.exists() else []
 
-        self.model_paths = [model_file] # Store as a list for consistency, even if it's one model
-        logger.info(f"找到模型文件: {model_file.name}")
+        if ensemble_files:
+            self.model_paths = ensemble_files
+            logger.info(
+                f"找到毒性集成模型目录: {ensemble_dir.name}, "
+                f"将加载 {len(self.model_paths)} 个 checkpoint"
+            )
+        else:
+            model_file = model_dir / "best_model.pt"
+            if not model_file.exists():
+                # Fallback to looking for any .pt file if best_model.pt is not found
+                model_files_glob = sorted(model_dir.glob("*.pt"))
+                if not model_files_glob:
+                    error_msg = f"在 {model_dir} 中未找到 ensemble checkpoint、best_model.pt 或任何 .pt 模型文件"
+                    logger.error(error_msg)
+                    raise FileNotFoundError(error_msg)
+
+                model_file = model_files_glob[0] # Take the first one found
+                logger.warning(f"best_model.pt 未找到，回退加载: {model_file.name}")
+
+            self.model_paths = [model_file]
+            logger.warning("未找到 toxicity ensemble，使用单模型回退路径")
+
+        logger.info(f"找到模型文件: {[path.name for path in self.model_paths]}")
         
         # 从配置文件读取hidden_dim和dropout
         config_path = Path(self.config.model_dir) / "config.json"
@@ -238,7 +249,7 @@ class ToxicityPredictor:
             esm2_features_dir: ESM2 特征文件目录
             esmc_features_dir: ESMC 特征文件目录
             sample_ids: 样本 ID 列表 (可选, 如果为None, 则处理目录中所有.pt文件)
-            return_confidence: 是否返回置信度 (暂未实现)
+            return_confidence: 是否返回 ensemble 模型间标准差作为置信度来源
 
         Returns:
             Dict: 包含预测结果的字典，格式为 {"prediction_map": {sample_id: prediction_details}, "mean_toxicity_prob": float}
@@ -274,8 +285,9 @@ class ToxicityPredictor:
             )
             logger.info(f"[{[sid for sid in sample_ids] if sample_ids else 'All samples'}] DataLoader created.")
 
-            # 存储每个模型的预测概率
-            all_model_probs = []
+            # 存储每个批次的 ensemble 均值和模型间标准差
+            all_batch_mean_probs = []
+            all_batch_std_probs = []
             all_sample_ids_processed = [] # To store the actual IDs processed by DataLoader
 
             # 预测
@@ -290,50 +302,46 @@ class ToxicityPredictor:
                     logger.debug(f"[{[sid for sid in sample_ids] if sample_ids else 'All samples'}] Batch ESM2 features shape: {batch_esm2_features.shape}, device: {batch_esm2_features.device}")
                     logger.debug(f"[{[sid for sid in sample_ids] if sample_ids else 'All samples'}] Batch ESMC features shape: {batch_esmc_features.shape}, device: {batch_esmc_features.device}")
 
-                    # 单个模型的预测概率 (self.models should contain only one model)
-                    if self.models: # Should always be true if _load_models succeeded
-                        model = self.models[0] # Get the single loaded model
+                    batch_model_probs = []
+                    for model_idx, model in enumerate(self.models, start=1):
                         with autocast(enabled=self.config.use_amp):
                             outputs = model(esm2_features=batch_esm2_features, esmc_features=batch_esmc_features)
-                            probs = torch.sigmoid(outputs).cpu().numpy() # (batch_size,) or (batch_size, 1)
-                        
-                        # Ensure probs is (batch_size, 1) for consistency with stacking later
-                        if probs.ndim == 1:
-                            probs = probs[:, np.newaxis]
-                        
-                        all_model_probs.append(probs) # probs is (batch_size, 1)
-                        logger.debug(f"[{[sid for sid in sample_ids] if sample_ids else 'All samples'}] Model raw outputs shape: {outputs.shape}, probs shape: {probs.shape}")
-                    else: # Should not happen
-                        logger.error("No model available in self.models during prediction loop.")
-                        # Handle error appropriately, e.g., by appending zeros or raising exception
-                        # For now, let's append zeros to avoid crashing, but this indicates a problem
-                        num_samples_in_batch = batch_esm2_features.shape[0]
-                        all_model_probs.append(np.zeros((num_samples_in_batch, 1)))
+                            probs = torch.sigmoid(outputs).detach().float().view(-1).cpu().numpy()
+                        batch_model_probs.append(probs)
+                        logger.debug(
+                            f"[{[sid for sid in sample_ids] if sample_ids else 'All samples'}] "
+                            f"Model {model_idx}/{len(self.models)} raw outputs shape: {outputs.shape}, probs shape: {probs.shape}"
+                        )
 
+                    batch_probs = np.stack(batch_model_probs, axis=0) # (num_models, batch_size)
+                    all_batch_mean_probs.append(batch_probs.mean(axis=0))
+                    all_batch_std_probs.append(batch_probs.std(axis=0))
 
-            if not all_model_probs:
+            if not all_batch_mean_probs:
                 logger.warning(f"[{[sid for sid in sample_ids] if sample_ids else 'All samples'}] No model probabilities were generated.")
                 return {"prediction_map": {}, "mean_toxicity_prob": None}
 
-            # 合并所有批次的预测概率
-            # all_model_probs is a list, each element is (batch_size_for_that_batch, 1)
-            final_probs_array = np.concatenate(all_model_probs, axis=0) # (total_samples, 1)
-            logger.info(f"[{[sid for sid in sample_ids] if sample_ids else 'All samples'}] Concatenated all batch probs. Final array shape: {final_probs_array.shape}. Total processed sample IDs: {len(all_sample_ids_processed)}")
-
-            # 计算平均概率 (for a single model, this just squeezes the last dimension)
-            mean_probs = np.mean(final_probs_array, axis=1) # (total_samples,)
-            logger.info(f"[{[sid for sid in sample_ids] if sample_ids else 'All samples'}] Calculated probabilities from the single model. Shape: {mean_probs.shape}")
+            # 合并所有批次的 ensemble 预测概率
+            mean_probs = np.concatenate(all_batch_mean_probs, axis=0) # (total_samples,)
+            std_probs = np.concatenate(all_batch_std_probs, axis=0) # (total_samples,)
+            logger.info(
+                f"[{[sid for sid in sample_ids] if sample_ids else 'All samples'}] "
+                f"Calculated ensemble probabilities from {len(self.models)} model(s). "
+                f"Shape: {mean_probs.shape}. Total processed sample IDs: {len(all_sample_ids_processed)}"
+            )
 
             # 构建预测结果映射
             prediction_map = {}
             for i, sample_id_processed in enumerate(all_sample_ids_processed):
                 prob = float(mean_probs[i])
                 is_toxic = prob >= self.config.threshold
-                prediction_map[sample_id_processed] = {
+                prediction = {
                     "toxicity_prob": prob,
                     "is_toxic": is_toxic,
-                    # "confidence": float(np.std(final_probs_array[i])) if return_confidence and final_probs_array.shape[0] > 1 else None
                 }
+                if return_confidence and len(self.models) > 1:
+                    prediction["confidence"] = float(std_probs[i])
+                prediction_map[sample_id_processed] = prediction
                 # logger.debug(f"[{sample_id_processed}] Processed prediction: Prob={prob:.4f}, IsToxic={is_toxic}")
 
             overall_mean_toxicity_prob = float(np.mean(mean_probs)) if mean_probs.size > 0 else None

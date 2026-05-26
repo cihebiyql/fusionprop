@@ -23,7 +23,7 @@
 
     <div class="card mb-4">
         <div class="card-body">
-            <p class="card-text">All prediction models within FusionProp utilize a consistent architecture based on the weighted fusion of embeddings from two powerful protein language models (PLMs): ESM2 (650M parameter version, <code>esm2_t33_650M_UR50D</code>) and ESMC (600M parameter version, <code>esmc_600m</code>). Input protein sequences are processed by both PLMs to generate sequence embeddings. These embeddings are then projected, potentially refined through shallow MLP encoders, and combined using a learned weighting parameter (alpha). The resulting fused feature vector is passed to a final MLP prediction head specific to each task. Models were trained using PyTorch, employing 5-fold cross-validation, and the final predictions represent an ensemble average of the 5 models for robustness.</p>
+            <p class="card-text">All prediction models within FusionProp utilize a consistent architecture based on the weighted fusion of embeddings from two powerful protein language models (PLMs): ESM2 (650M parameter version, <code>esm2_t33_650M_UR50D</code>) and ESMC (600M parameter version, <code>esmc_600m</code>). Input protein sequences are processed by both PLMs to generate sequence embeddings. These embeddings are then projected, potentially refined through shallow MLP encoders, and combined using a learned weighting parameter (alpha). The resulting fused feature vector is passed to a final MLP prediction head specific to each task. Models were trained using PyTorch with cross-validation. In the deployed web service, solubility uses a five-fold ensemble, toxicity uses a five-checkpoint ensemble averaged at prediction time, and thermostability uses a selected regression checkpoint.</p>
         </div>
     </div>
 
@@ -38,7 +38,8 @@
                         <li><strong>Training Protocol:</strong> 5-fold cross-validation. Training data within each fold balanced via random under-sampling of negative class to achieve a ~20:1 Negative:Positive ratio (approx. 19,700 sequences per training fold).</li>
                         <li><strong>Validation:</strong> Performed on a held-out fold from the Nov 2022 data pool (imbalanced).</li>
                         <li><strong>Independent Testing:</strong> Evaluated on a temporally distinct test set curated from UniProtKB/Swiss-Prot (April 2025 release) with rigorous redundancy removal (70% identity cutoff against the entire Nov 2022 pool). Test set ratio approx. 22:1 Negative:Positive.</li>
-                        <li><strong>Key Performance (on Independent Test Set):</strong> Achieved highly competitive results, including AUC ~0.978 and F1-score ~0.744. <em>(Note: This F1 was based on 1/10 subsets, final ensemble may vary slightly)</em>. Significantly outperforming many existing methods.</li>
+                        <li><strong>Deployment:</strong> The website averages five toxicity checkpoints from <code>ensemble_20250513_105204</code>; a sequence is reported as toxic when the ensemble mean probability is >= 0.5.</li>
+                        <li><strong>Key Performance (on Independent Test Set):</strong> On the 4,612-sequence April 2025 temporal test set, the five-checkpoint ensemble achieved ROC-AUC 0.970, PR-AUC 0.603, F1 0.606, accuracy 0.958, and MCC 0.598 at threshold 0.5.</li>
                         <li><strong>Loss Function:</strong> Binary Cross-Entropy with Logits Loss (<code>BCEWithLogitsLoss</code>).</li>
                     </ul>
                 </div>
@@ -77,7 +78,7 @@
     <h2 class="mb-3">Links</h2>
     <ul class="list-unstyled">
         <!-- <li><strong>FusionProp Publication:</strong> [Link to your final paper DOI or arXiv preprint]</li> -->
-        <li><strong>FusionProp Code Repository:</strong> <a href="https://github.com/cihebi2/fusionprop" target="_blank">GitHub Repository</a></li>
+        <li><strong>FusionProp Code Repository:</strong> <a href="https://github.com/cihebiyql/fusionprop" target="_blank">GitHub Repository</a></li>
     </ul>
 
 </div>
